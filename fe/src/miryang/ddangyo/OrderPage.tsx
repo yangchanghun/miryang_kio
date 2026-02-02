@@ -201,7 +201,7 @@ const OrderPage = () => {
 
         {/* 결제 버튼 */}
         <button
-          onClick={() => navigate("/ddangyo/finish")}
+          onClick={() => navigate("/miryang/ddangyo/finish")}
           className="fixed bottom-0 left-0 right-0 bg-orange-500 text-white py-4 text-lg font-bold"
         >
           {totalAmount.toLocaleString()}원 결제하기
