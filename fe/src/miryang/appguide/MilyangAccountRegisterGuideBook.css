@@ -1,0 +1,1929 @@
+/* Guidebook.css */
+
+/* CSS 변수로 스케일 정의 */
+:root {
+  --scale: 0.75; /* 기본값 */
+}
+
+/* 반응형 스케일링 - 높이 1000px 미만일 때 0.5배 */
+@media (max-height: 999px) {
+  :root {
+    --scale: 0.5;
+  }
+}
+
+/* 반응형 스케일링 - 높이 1000px 이상일 때 0.75배 */
+@media (min-height: 1000px) {
+  :root {
+    --scale: 0.75;
+  }
+}
+
+/* 가이드북 전체 스타일 */
+.guidebook-container {
+  background: linear-gradient(135deg, #f472b6, #fda4af, #e9d5ff);
+  width: 100vw;
+  height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(20px * var(--scale));
+  box-sizing: border-box;
+}
+
+.component-showcase {
+  background: #c0c0c0;
+  border-radius: calc(12px * var(--scale));
+  padding: calc(40px * var(--scale));
+  box-shadow: 0 calc(8px * var(--scale)) calc(32px * var(--scale))
+    rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(20px * var(--scale));
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.component-title {
+  font-size: calc(24px * var(--scale));
+  font-weight: bold;
+  color: #333;
+  margin-bottom: calc(10px * var(--scale));
+  font-family: "Inter", sans-serif;
+}
+
+.component-wrapper {
+  border-radius: calc(8px * var(--scale));
+  overflow: hidden;
+  box-shadow: 0 calc(4px * var(--scale)) calc(16px * var(--scale))
+    rgba(0, 0, 0, 0.1);
+}
+
+.background-info {
+  font-size: calc(16px * var(--scale));
+  color: #666;
+  font-family: "Inter", sans-serif;
+  margin-top: calc(10px * var(--scale));
+}
+
+/* 밀양사랑카드 컴포넌트 스타일 */
+.milyang-account {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 20px;
+}
+
+.milyang-account-background {
+  width: calc(720px * var(--scale));
+  height: calc(812px * var(--scale));
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #ffb5d6;
+}
+
+.milyang-account-title {
+  left: calc(38px * var(--scale));
+  top: calc(31px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(35px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account-menu-icon {
+  width: calc(33px * var(--scale));
+  height: calc(33px * var(--scale));
+  left: calc(591px * var(--scale));
+  top: calc(35px * var(--scale));
+  position: absolute;
+  overflow: hidden;
+}
+
+.milyang-account-menu-icon-inner {
+  width: calc(33.11px * var(--scale));
+  height: calc(32.99px * var(--scale));
+  left: calc(-0.11px * var(--scale));
+  top: 0;
+  position: absolute;
+  background: black;
+}
+
+.milyang-account-menu-line {
+  width: calc(30px * var(--scale));
+  height: 0;
+  left: calc(651px * var(--scale));
+  position: absolute;
+  outline: calc(2px * var(--scale)) black solid;
+  outline-offset: calc(-1px * var(--scale));
+}
+
+.milyang-account-menu-line-1 {
+  top: calc(38px * var(--scale));
+}
+
+.milyang-account-menu-line-2 {
+  top: calc(52px * var(--scale));
+}
+
+.milyang-account-menu-line-3 {
+  top: calc(66px * var(--scale));
+}
+
+.milyang-account-card-section {
+  width: calc(672px * var(--scale));
+  height: calc(300px * var(--scale));
+  left: calc(24px * var(--scale));
+  top: calc(101px * var(--scale));
+  position: absolute;
+  background: #fec8e2;
+}
+
+.milyang-account-arrow-right {
+  width: calc(31.08px * var(--scale));
+  height: calc(16px * var(--scale));
+  left: calc(664.29px * var(--scale));
+  top: calc(134.31px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account-arrow-left {
+  width: calc(31.08px * var(--scale));
+  height: calc(16px * var(--scale));
+  left: calc(654.39px * var(--scale));
+  top: calc(157px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account-profile-image {
+  width: calc(68px * var(--scale));
+  height: calc(68px * var(--scale));
+  left: calc(53px * var(--scale));
+  top: calc(117px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account-welcome-text {
+  left: calc(53px * var(--scale));
+  top: calc(199px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(33px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account-divider {
+  width: calc(604px * var(--scale));
+  height: 0;
+  left: calc(53px * var(--scale));
+  position: absolute;
+  outline-offset: calc(-1px * var(--scale));
+}
+
+.milyang-account-divider-top {
+  top: calc(309px * var(--scale));
+  outline: calc(2px * var(--scale)) #fdafd4 solid;
+}
+
+.milyang-account-divider-bottom {
+  top: calc(572px * var(--scale));
+  outline: calc(2px * var(--scale)) #ff9fcd solid;
+}
+
+.milyang-account-connect-text {
+  left: calc(226px * var(--scale));
+  top: calc(336px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 두근두근 이펙트 애니메이션 */
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.milyang-account-circle-icon {
+  width: calc(120px * var(--scale));
+  height: calc(120px * var(--scale));
+  left: calc(55px * var(--scale));
+  top: calc(427px * var(--scale));
+  position: absolute;
+  background: #c98da9;
+  border-radius: 9999px;
+}
+
+.milyang-account-wallet-icon {
+  width: calc(50px * var(--scale));
+  height: calc(79px * var(--scale));
+  left: calc(90px * var(--scale));
+  top: calc(450px * var(--scale));
+  position: absolute;
+  object-fit: cover;
+  border-radius: calc(15px * var(--scale));
+}
+
+.milyang-account-amount-label {
+  left: calc(217px * var(--scale));
+  top: calc(452px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(25px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account-amount-value {
+  left: calc(217px * var(--scale));
+  top: calc(485px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(38px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account-balance-section {
+  width: calc(602px * var(--scale));
+  height: calc(74px * var(--scale));
+  left: calc(53px * var(--scale));
+  position: absolute;
+  background: #f9a7cd;
+}
+
+.milyang-account-balance-section-1 {
+  top: calc(593px * var(--scale));
+}
+
+.milyang-account-balance-section-2 {
+  top: calc(679px * var(--scale));
+}
+
+.milyang-account-balance-label {
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account-balance-label-1 {
+  left: calc(93px * var(--scale));
+  top: calc(614px * var(--scale));
+}
+
+.milyang-account-balance-label-2 {
+  left: calc(93px * var(--scale));
+  top: calc(701px * var(--scale));
+}
+
+.milyang-account-info-icon {
+  width: calc(26px * var(--scale));
+  height: calc(26px * var(--scale));
+  left: calc(212px * var(--scale));
+  top: calc(617px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account-balance-value {
+  position: absolute;
+}
+
+.milyang-account-balance-value-1 {
+  left: calc(548px * var(--scale));
+  top: calc(613px * var(--scale));
+}
+
+.milyang-account-balance-value-2 {
+  left: calc(548px * var(--scale));
+  top: calc(699px * var(--scale));
+}
+
+.milyang-account-balance-amount {
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account-balance-arrow {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account-bottom-nav {
+  width: calc(720px * var(--scale));
+  height: calc(83px * var(--scale));
+  left: 0;
+  top: calc(776px * var(--scale));
+  position: absolute;
+  background: #f596c0;
+}
+
+.milyang-account-nav-icon {
+  width: calc(50px * var(--scale));
+  height: calc(50px * var(--scale));
+  position: absolute;
+  top: calc(793px * var(--scale));
+}
+
+.milyang-account-nav-icon-1 {
+  left: calc(67px * var(--scale));
+}
+
+.milyang-account-nav-icon-2 {
+  left: calc(272px * var(--scale));
+}
+
+.milyang-account-nav-icon-3 {
+  left: calc(494px * var(--scale));
+}
+
+.milyang-account-nav-text {
+  position: absolute;
+  color: white;
+  font-size: calc(27px * var(--scale));
+  font-weight: 500;
+  word-wrap: break-word;
+  top: calc(801px * var(--scale));
+}
+
+.milyang-account-nav-text-1 {
+  left: calc(125px * var(--scale));
+}
+
+.milyang-account-nav-text-2 {
+  left: calc(330px * var(--scale));
+}
+
+.milyang-account-nav-text-3 {
+  left: calc(552px * var(--scale));
+}
+
+.milyang-account-incentive-container {
+  width: calc(640px * var(--scale));
+  height: calc(316px * var(--scale));
+  left: calc(40px * var(--scale));
+  top: calc(879px * var(--scale));
+  position: absolute;
+  border-radius: calc(5px * var(--scale));
+  border: calc(2px * var(--scale)) #cdcdcd solid;
+}
+
+.milyang-account-incentive-header {
+  width: calc(636px * var(--scale));
+  height: calc(96px * var(--scale));
+  left: calc(42px * var(--scale));
+  top: calc(881px * var(--scale));
+  position: absolute;
+  background: #eeeeee;
+  border-top-left-radius: calc(3px * var(--scale));
+  border-top-right-radius: calc(3px * var(--scale));
+}
+
+.milyang-account-incentive-label {
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account-incentive-label-1 {
+  left: calc(78px * var(--scale));
+  top: calc(998px * var(--scale));
+}
+
+.milyang-account-incentive-label-2 {
+  left: calc(78px * var(--scale));
+  top: calc(1060px * var(--scale));
+}
+
+.milyang-account-incentive-value {
+  position: absolute;
+}
+
+.milyang-account-incentive-value-1 {
+  left: calc(507px * var(--scale));
+  top: calc(994px * var(--scale));
+}
+
+.milyang-account-incentive-value-2 {
+  left: calc(489px * var(--scale));
+  top: calc(1057px * var(--scale));
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-account-incentive-percent {
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-account-incentive-text {
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account-divider-gray {
+  width: calc(568px * var(--scale));
+  height: 0;
+  left: calc(76px * var(--scale));
+  top: calc(1045px * var(--scale));
+  position: absolute;
+  outline: calc(3px * var(--scale)) #eeeeee solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account-month-benefit {
+  left: calc(73px * var(--scale));
+  top: calc(910px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account-month-text {
+  color: black;
+  font-size: calc(34px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account-benefit-text {
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-account-status-badge {
+  width: calc(84px * var(--scale));
+  height: calc(37px * var(--scale));
+  left: calc(198px * var(--scale));
+  top: calc(912px * var(--scale));
+  position: absolute;
+  background: #5681f2;
+  border-radius: calc(22px * var(--scale));
+}
+
+.milyang-account-status-text {
+  left: calc(209px * var(--scale));
+  top: calc(919px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(20px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account-benefit-button {
+  width: calc(577px * var(--scale));
+  height: calc(64px * var(--scale));
+  left: calc(71px * var(--scale));
+  top: calc(1106px * var(--scale));
+  position: absolute;
+  background: #eeeeee;
+}
+
+.milyang-account-benefit-button-text {
+  left: calc(279px * var(--scale));
+  top: calc(1124px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(24px * var(--scale));
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-account-bottom-image {
+  width: calc(225px * var(--scale));
+  height: calc(88px * var(--scale));
+  left: calc(247px * var(--scale));
+  top: calc(1151px * var(--scale));
+  position: absolute;
+}
+/* 두 번째 페이지 - 계좌연결 동의 페이지 스타일 */
+.milyang-account2 {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px calc(4px * var(--scale))
+    calc(20px * var(--scale));
+}
+
+.milyang-account2-title {
+  left: calc(301px * var(--scale));
+  top: calc(43px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account2-arrow-right {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(676px * var(--scale));
+  top: calc(57.63px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account2-arrow-left {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(655.37px * var(--scale));
+  top: calc(83px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account2-main-text {
+  left: calc(49px * var(--scale));
+  top: calc(138px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(41px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account2-sub-text {
+  left: calc(49px * var(--scale));
+  top: calc(254px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account2-description {
+  left: calc(49px * var(--scale));
+  top: calc(344px * var(--scale));
+  position: absolute;
+  color: #606060;
+  font-size: calc(24px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account2-divider {
+  width: calc(643px * var(--scale));
+  height: 0;
+  left: calc(38px * var(--scale));
+  top: calc(818px * var(--scale));
+  position: absolute;
+  outline: calc(4px * var(--scale)) #f3f3f3 solid;
+  outline-offset: calc(-2px * var(--scale));
+}
+
+.milyang-account2-button-bg {
+  width: calc(720px * var(--scale));
+  height: calc(113px * var(--scale));
+  left: 0;
+  top: calc(1140px * var(--scale));
+  position: absolute;
+  background: #e86696;
+}
+
+.milyang-account2-button-text {
+  left: calc(205px * var(--scale));
+  top: calc(1178px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(32px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account2-agreement-list {
+  left: calc(49px * var(--scale));
+  top: calc(857px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-weight: 500;
+  line-height: calc(62px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account2-agreement-arrows {
+  left: calc(658px * var(--scale));
+  top: calc(856px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-weight: 500;
+  line-height: calc(62px * var(--scale));
+  word-wrap: break-word;
+}
+
+/* 세 번째 페이지 - 계좌번호 입력 페이지 스타일 */
+.milyang-account3 {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px calc(4px * var(--scale))
+    calc(20px * var(--scale));
+}
+
+.milyang-account3-arrow-right {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(676px * var(--scale));
+  top: calc(77.63px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account3-arrow-left {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(655.37px * var(--scale));
+  top: calc(103px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account3-title {
+  left: calc(264px * var(--scale));
+  top: calc(59px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account3-main-text {
+  left: calc(49px * var(--scale));
+  top: calc(173px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(40px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account3-benefit-text {
+  left: calc(49px * var(--scale));
+  top: calc(301px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account3-benefit-normal {
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account3-benefit-highlight {
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account3-bank-select-box {
+  width: calc(406px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(49px * var(--scale));
+  top: calc(448px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account3-bank-button {
+  width: calc(205px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(473px * var(--scale));
+  top: calc(448px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e86696 solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account3-bank-button:hover {
+  background-color: #e86696;
+  opacity: 0.1;
+}
+
+.milyang-account3-account-input-box {
+  width: calc(629px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(49px * var(--scale));
+  top: calc(570px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account3-bank-placeholder {
+  left: calc(80px * var(--scale));
+  top: calc(481px * var(--scale));
+  position: absolute;
+  color: #808080;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account3-bank-button-text {
+  left: calc(520px * var(--scale));
+  top: calc(481px * var(--scale));
+  position: absolute;
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account3-bank-button-text:hover {
+  transform: scale(1.05);
+}
+
+.milyang-account3-account-placeholder {
+  left: calc(80px * var(--scale));
+  top: calc(603px * var(--scale));
+  position: absolute;
+  color: #808080;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account3-warning-text {
+  left: calc(49px * var(--scale));
+  top: calc(682px * var(--scale));
+  position: absolute;
+  color: #a9a9a9;
+  font-size: calc(27px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+/* 네 번째 페이지 - 은행 선택 페이지 스타일 */
+.milyang-account4 {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px calc(4px * var(--scale))
+    calc(20px * var(--scale));
+}
+
+.milyang-account4-arrow-right {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(676px * var(--scale));
+  top: calc(55.63px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account4-arrow-left {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(655.37px * var(--scale));
+  top: calc(81px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account4-title {
+  left: calc(43px * var(--scale));
+  top: calc(37px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account4-tab-bank {
+  left: calc(151px * var(--scale));
+  top: calc(144px * var(--scale));
+  position: absolute;
+  color: #e86696;
+  font-size: calc(28px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account4-tab-securities {
+  left: calc(501px * var(--scale));
+  top: calc(144px * var(--scale));
+  position: absolute;
+  color: #a4a4a4;
+  font-size: calc(28px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account4-divider {
+  width: calc(720px * var(--scale));
+  height: 0;
+  left: 0;
+  top: calc(205px * var(--scale));
+  position: absolute;
+  outline: calc(3px * var(--scale)) #dfdfdf solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account4-active-indicator {
+  width: calc(129px * var(--scale));
+  height: 0;
+  left: calc(112px * var(--scale));
+  top: calc(203px * var(--scale));
+  position: absolute;
+  outline: calc(5px * var(--scale)) #e86696 solid;
+  outline-offset: calc(-2.5px * var(--scale));
+}
+
+.milyang-account4-bank-list {
+  width: calc(720px * var(--scale));
+  height: calc(900px * var(--scale));
+  left: 0;
+  top: calc(250px * var(--scale));
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account4-bank-list:hover {
+  background-color: rgba(232, 102, 150, 0.05);
+}
+
+.milyang-account4-bottom-image {
+  width: calc(658px * var(--scale));
+  height: calc(38px * var(--scale));
+  left: calc(31px * var(--scale));
+  top: calc(1196px * var(--scale));
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account4-bottom-image:hover {
+  opacity: 0.8;
+}
+/* 다섯 번째 페이지 - ARS 전화 인증 페이지 스타일 */
+.milyang-account5 {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px calc(4px * var(--scale))
+    calc(20px * var(--scale));
+}
+
+.milyang-account5-arrow-right {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(682px * var(--scale));
+  top: calc(57.63px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account5-arrow-left {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(661.37px * var(--scale));
+  top: calc(83px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account5-title {
+  left: calc(264px * var(--scale));
+  top: calc(39px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account5-main-text {
+  left: calc(48px * var(--scale));
+  top: calc(139px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(40px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account5-instruction-text {
+  left: calc(48px * var(--scale));
+  top: calc(212px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account5-instruction-highlight {
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account5-instruction-normal {
+  color: #1f1f1f;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account5-bank-display-box {
+  width: calc(406px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(347px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account5-bank-change-button {
+  width: calc(205px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(469px * var(--scale));
+  top: calc(347px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e86696 solid;
+}
+
+.milyang-account5-account-display-box {
+  width: calc(629px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(469px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account5-bank-name {
+  left: calc(76px * var(--scale));
+  top: calc(380px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account5-bank-change-text {
+  left: calc(516px * var(--scale));
+  top: calc(380px * var(--scale));
+  position: absolute;
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account5-account-number {
+  left: calc(76px * var(--scale));
+  top: calc(502px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account5-warning-text {
+  left: calc(45px * var(--scale));
+  top: calc(581px * var(--scale));
+  position: absolute;
+  color: #a9a9a9;
+  font-size: calc(27px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account5-verify-button {
+  width: calc(626px * var(--scale));
+  height: calc(95px * var(--scale));
+  left: calc(48px * var(--scale));
+  top: calc(640px * var(--scale));
+  position: absolute;
+  background: #e86696;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: calc(8px * var(--scale));
+}
+
+.milyang-account5-verify-button:hover {
+  background: #d35a86;
+  transform: translateY(-2px);
+  box-shadow: 0 calc(4px * var(--scale)) calc(12px * var(--scale))
+    rgba(232, 102, 150, 0.3);
+}
+
+.milyang-account5-verify-button-text {
+  left: calc(306px * var(--scale));
+  top: calc(669px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(30px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account5-verify-button-text:hover {
+  transform: scale(1.05);
+}
+/* 여섯 번째 페이지 - ARS 전화 요청 모달 페이지 스타일 */
+.milyang-account6 {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px calc(4px * var(--scale))
+    calc(20px * var(--scale));
+}
+
+/* 배경 페이지 스타일 */
+.milyang-account6-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.milyang-account6-arrow-right {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(682px * var(--scale));
+  top: calc(57.63px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account6-arrow-left {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(661.37px * var(--scale));
+  top: calc(83px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account6-title {
+  left: calc(264px * var(--scale));
+  top: calc(39px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-main-text {
+  left: calc(48px * var(--scale));
+  top: calc(139px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(40px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account6-instruction-text {
+  left: calc(48px * var(--scale));
+  top: calc(212px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account6-instruction-highlight {
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-instruction-normal {
+  color: #1f1f1f;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-bank-display-box {
+  width: calc(406px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(347px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account6-bank-change-button {
+  width: calc(205px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(469px * var(--scale));
+  top: calc(347px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e86696 solid;
+}
+
+.milyang-account6-account-display-box {
+  width: calc(629px * var(--scale));
+  height: calc(102px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(469px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account6-bank-name {
+  left: calc(76px * var(--scale));
+  top: calc(380px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-bank-change-text {
+  left: calc(516px * var(--scale));
+  top: calc(380px * var(--scale));
+  position: absolute;
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-account-number {
+  left: calc(76px * var(--scale));
+  top: calc(502px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-warning-text {
+  left: calc(45px * var(--scale));
+  top: calc(581px * var(--scale));
+  position: absolute;
+  color: #a9a9a9;
+  font-size: calc(27px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-verify-button {
+  width: calc(626px * var(--scale));
+  height: calc(95px * var(--scale));
+  left: calc(48px * var(--scale));
+  top: calc(640px * var(--scale));
+  position: absolute;
+  background: #e86696;
+}
+
+.milyang-account6-verify-button-text {
+  left: calc(306px * var(--scale));
+  top: calc(669px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(30px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+/* 모달 스타일 */
+.milyang-account6-modal-overlay {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.milyang-account6-modal {
+  width: calc(585px * var(--scale));
+  height: calc(493px * var(--scale));
+  left: calc(67px * var(--scale));
+  top: calc(322px * var(--scale));
+  position: absolute;
+  background: white;
+  border-radius: calc(12px * var(--scale));
+}
+
+.milyang-account6-modal-button {
+  width: calc(585px * var(--scale));
+  height: calc(93px * var(--scale));
+  left: calc(67px * var(--scale));
+  top: calc(728px * var(--scale));
+  position: absolute;
+  background: #e86696;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: calc(0 0 12px 12px);
+}
+
+.milyang-account6-modal-button:hover {
+  background: #d35a86;
+  transform: translateY(-2px);
+}
+
+.milyang-account6-modal-button-text {
+  left: calc(249px * var(--scale));
+  top: calc(756px * var(--scale));
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account6-modal-ars {
+  color: white;
+  font-size: calc(28px * var(--scale));
+  font-weight: 900;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account6-modal-call-text {
+  color: white;
+  font-size: calc(28px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account6-number-display {
+  width: calc(300px * var(--scale));
+  height: calc(129px * var(--scale));
+  left: calc(210px * var(--scale));
+  top: calc(404px * var(--scale));
+  position: absolute;
+  background: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(8px * var(--scale));
+}
+
+.milyang-account6-number {
+  color: black;
+  font-size: calc(70px * var(--scale));
+  font-weight: 900;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account6-instruction {
+  left: calc(147px * var(--scale));
+  top: calc(581px * var(--scale));
+  position: absolute;
+  text-align: center;
+  color: #818181;
+  font-size: calc(25px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account6-timer-warning {
+  left: calc(177px * var(--scale));
+  top: calc(664px * var(--scale));
+  position: absolute;
+  text-align: center;
+  color: #fe4458;
+  font-size: calc(25px * var(--scale));
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-account6-close-arrow-right {
+  width: calc(13.7px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(609.31px * var(--scale));
+  top: calc(384.63px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-account6-close-arrow-left {
+  width: calc(13.7px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(588.06px * var(--scale));
+  top: calc(395px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+/* 전화 이펙트 */
+.milyang-account6-phone-effect {
+  position: absolute;
+  top: calc(50px * var(--scale));
+  left: calc(50% - 200px * var(--scale));
+  background: rgba(232, 102, 150, 0.9);
+  color: white;
+  padding: calc(20px * var(--scale));
+  border-radius: calc(25px * var(--scale));
+  font-size: calc(35px * var(--scale));
+  font-weight: bold;
+  text-align: center;
+  animation: phoneCall 0.8s ease-in-out infinite;
+  box-shadow: 0 calc(4px * var(--scale)) calc(20px * var(--scale))
+    rgba(232, 102, 150, 0.4);
+  z-index: 9999;
+}
+
+@keyframes phoneCall {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* 일곱 번째 페이지 - 고객확인정보 등록 페이지 스타일 */
+.milyang-account7 {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px calc(4px * var(--scale))
+    calc(20px * var(--scale));
+}
+
+.milyang-account7-back-button {
+  left: calc(42px * var(--scale));
+  top: calc(3px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(71px * var(--scale));
+  font-weight: 200;
+  word-wrap: break-word;
+}
+
+.milyang-account7-info-button {
+  width: calc(258px * var(--scale));
+  height: calc(53px * var(--scale));
+  left: calc(48px * var(--scale));
+  top: calc(285px * var(--scale));
+  position: absolute;
+  background: #efefef;
+  border-radius: calc(10px * var(--scale));
+}
+
+.milyang-account7-info-text {
+  left: calc(77px * var(--scale));
+  top: calc(289px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(20px * var(--scale));
+  font-weight: 600;
+  line-height: calc(45px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account7-main-text {
+  left: calc(48px * var(--scale));
+  top: calc(124px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(36px * var(--scale));
+  font-weight: 600;
+  line-height: calc(45px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account7-job-label {
+  left: calc(45px * var(--scale));
+  top: calc(371px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account7-job-input-box {
+  width: calc(629px * var(--scale));
+  height: calc(97px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(412px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account7-job-text {
+  left: calc(76px * var(--scale));
+  top: calc(444px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account7-job-arrow {
+  width: calc(21px * var(--scale));
+  height: calc(11px * var(--scale));
+  left: calc(611px * var(--scale));
+  top: calc(455px * var(--scale));
+  position: absolute;
+  outline: calc(4px * var(--scale)) black solid;
+  outline-offset: calc(-2px * var(--scale));
+}
+
+.milyang-account7-address-label {
+  left: calc(45px * var(--scale));
+  top: calc(532px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account7-address-input-box {
+  width: calc(406px * var(--scale));
+  height: calc(98px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(572px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account7-address-change-button {
+  width: calc(205px * var(--scale));
+  height: calc(98px * var(--scale));
+  left: calc(469px * var(--scale));
+  top: calc(572px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e86696 solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account7-address-change-button:hover {
+  background-color: rgba(232, 102, 150, 0.1);
+}
+
+.milyang-account7-address-text {
+  left: calc(75px * var(--scale));
+  top: calc(606px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account7-address-change-text {
+  left: calc(513px * var(--scale));
+  top: calc(603px * var(--scale));
+  position: absolute;
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account7-detail-address-box {
+  width: calc(629px * var(--scale));
+  height: calc(97px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(689px * var(--scale));
+  position: absolute;
+  border: calc(4px * var(--scale)) #e6e6e6 solid;
+}
+
+.milyang-account7-detail-address-text {
+  left: calc(76px * var(--scale));
+  top: calc(720px * var(--scale));
+  position: absolute;
+  color: #a3a3a3;
+  font-size: calc(30px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account7-bottom-section {
+  width: calc(720px * var(--scale));
+  height: calc(375px * var(--scale));
+  left: 0;
+  top: calc(905px * var(--scale));
+  position: absolute;
+  background: #f5f5f5;
+}
+
+.milyang-account7-question {
+  left: calc(163px * var(--scale));
+  top: calc(951px * var(--scale));
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-weight: 600;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account7-yes-button {
+  width: calc(315px * var(--scale));
+  height: calc(80px * var(--scale));
+  left: calc(45px * var(--scale));
+  top: calc(1033px * var(--scale));
+  position: absolute;
+  background: #e86696;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: calc(8px * var(--scale));
+}
+
+.milyang-account7-yes-button:hover {
+  background: #d35a86;
+  transform: translateY(-2px);
+}
+
+.milyang-account7-no-button {
+  width: calc(315px * var(--scale));
+  height: calc(80px * var(--scale));
+  left: calc(360px * var(--scale));
+  top: calc(1033px * var(--scale));
+  position: absolute;
+  background: white;
+  border: calc(4px * var(--scale)) #e86696 solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: calc(8px * var(--scale));
+}
+
+.milyang-account7-no-button:hover {
+  background: rgba(232, 102, 150, 0.1);
+}
+
+.milyang-account7-yes-text {
+  left: calc(121px * var(--scale));
+  top: calc(1054px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(30px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account7-yes-text:hover {
+  transform: scale(1.05);
+}
+
+.milyang-account7-no-text {
+  left: calc(470px * var(--scale));
+  top: calc(1055px * var(--scale));
+  position: absolute;
+  color: #e86696;
+  font-size: calc(30px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account7-next-button {
+  width: calc(720px * var(--scale));
+  height: calc(95px * var(--scale));
+  left: 0;
+  top: calc(1163px * var(--scale));
+  position: absolute;
+  background: #e86696;
+}
+
+.milyang-account7-next-text {
+  left: calc(332px * var(--scale));
+  top: calc(1192px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(30px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+/* 여덟 번째 페이지 - 계좌 연결 완료 페이지 스타일 */
+.milyang-account8 {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px calc(4px * var(--scale))
+    calc(20px * var(--scale));
+}
+
+.milyang-account8-check-circle {
+  width: calc(95px * var(--scale));
+  height: calc(95px * var(--scale));
+  left: calc(312px * var(--scale));
+  top: calc(76px * var(--scale));
+  position: absolute;
+  background: #3dc698;
+  border-radius: 9999px;
+}
+
+.milyang-account8-check-mark {
+  width: calc(55px * var(--scale));
+  height: calc(40px * var(--scale));
+  left: calc(332px * var(--scale));
+  top: calc(104px * var(--scale));
+  position: absolute;
+  outline: calc(5px * var(--scale)) white solid;
+  outline-offset: calc(-2.5px * var(--scale));
+}
+
+.milyang-account8-title {
+  left: calc(188px * var(--scale));
+  top: calc(209px * var(--scale));
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: calc(50px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account8-limit-notification {
+  width: calc(626px * var(--scale));
+  height: calc(64px * var(--scale));
+  left: calc(47px * var(--scale));
+  top: calc(369px * var(--scale));
+  position: absolute;
+  background: #fff7f8;
+  border-radius: calc(8px * var(--scale));
+}
+
+.milyang-account8-info-icon {
+  width: calc(37px * var(--scale));
+  height: calc(37px * var(--scale));
+  left: calc(183px * var(--scale));
+  top: calc(382px * var(--scale));
+  position: absolute;
+  background: #d3d3d3;
+  border-radius: 9999px;
+}
+
+.milyang-account8-info-image {
+  width: calc(22.51px * var(--scale));
+  height: calc(22.51px * var(--scale));
+  left: calc(190.25px * var(--scale));
+  top: calc(389.25px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account8-limit-text {
+  left: calc(236px * var(--scale));
+  top: calc(387px * var(--scale));
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: calc(23px * var(--scale));
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-account8-subtitle {
+  left: calc(170px * var(--scale));
+  top: calc(484px * var(--scale));
+  position: absolute;
+  color: #a9a9a9;
+  font-size: calc(25px * var(--scale));
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-account8-info-box {
+  width: calc(626px * var(--scale));
+  height: calc(162px * var(--scale));
+  left: calc(47px * var(--scale));
+  top: calc(547px * var(--scale));
+  position: absolute;
+  background: #ededed;
+  border-radius: calc(8px * var(--scale));
+}
+
+.milyang-account8-info-labels {
+  left: calc(96px * var(--scale));
+  top: calc(580px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(25px * var(--scale));
+  font-weight: 800;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+  margin-top: 4px;
+}
+
+.milyang-account8-info-values {
+  left: calc(236px * var(--scale));
+  top: calc(560px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account8-separator {
+  color: #c3c3c3;
+  font-size: calc(25px * var(--scale));
+  font-weight: 800;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account8-value {
+  color: black;
+  font-size: calc(25px * var(--scale));
+  font-weight: 800;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account8-warning-title {
+  left: calc(47px * var(--scale));
+  top: calc(929px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(25px * var(--scale));
+  font-weight: 800;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account8-warning-text {
+  left: calc(47px * var(--scale));
+  top: calc(977px * var(--scale));
+  position: absolute;
+}
+
+.milyang-account8-warning-normal {
+  color: black;
+  font-size: calc(22px * var(--scale));
+  font-weight: 600;
+  line-height: calc(30px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account8-warning-highlight {
+  color: #e86696;
+  font-size: calc(22px * var(--scale));
+  font-weight: 600;
+  line-height: calc(30px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-account8-confirm-button {
+  width: calc(720px * var(--scale));
+  height: calc(95px * var(--scale));
+  left: 0;
+  top: calc(1165px * var(--scale));
+  position: absolute;
+  background: #e86696;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account8-confirm-button:hover {
+  background: #d35a86;
+}
+
+.milyang-account8-confirm-text {
+  left: calc(332px * var(--scale));
+  top: calc(1194px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(30px * var(--scale));
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milyang-account8-confirm-text:hover {
+  transform: scale(1.05);
+}

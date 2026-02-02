@@ -1,0 +1,2121 @@
+/* CSS 변수로 스케일 정의 */
+:root {
+  --scale: 0.75; /* 기본값 */
+}
+
+/* 반응형 스케일링 - 높이 1000px 미만일 때 0.5배 */
+@media (max-height: 999px) {
+  :root {
+    --scale: 0.5;
+  }
+}
+
+/* 반응형 스케일링 - 높이 1000px 이상일 때 0.75배 */
+@media (min-height: 1000px) {
+  :root {
+    --scale: 0.75;
+  }
+}
+
+.milyang-recharge-container {
+  background: linear-gradient(135deg, #f472b6, #fda4af, #e9d5ff);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.milyang-recharge1-container {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: 0 calc(4px * var(--scale)) calc(20px * var(--scale))
+    rgba(0, 0, 0, 0.15);
+}
+
+.milyang-recharge1-main-background {
+  width: calc(720px * var(--scale));
+  height: calc(551px * var(--scale));
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #ffb5d6;
+}
+
+.milyang-recharge1-header-title {
+  left: calc(38px * var(--scale));
+  top: calc(31px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(35px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-menu-icon {
+  width: calc(33px * var(--scale));
+  height: calc(33px * var(--scale));
+  left: calc(591px * var(--scale));
+  top: calc(35px * var(--scale));
+  position: absolute;
+  overflow: hidden;
+}
+
+.milyang-recharge1-menu-icon-bg {
+  width: calc(33.11px * var(--scale));
+  height: calc(32.99px * var(--scale));
+  left: calc(-0.11px * var(--scale));
+  top: 0;
+  position: absolute;
+  background: black;
+}
+
+.milyang-recharge1-menu-line {
+  width: calc(30px * var(--scale));
+  height: 0;
+  left: calc(651px * var(--scale));
+  position: absolute;
+  outline: calc(2px * var(--scale)) black solid;
+  outline-offset: calc(-1px * var(--scale));
+}
+
+.milyang-recharge1-menu-line-1 {
+  top: calc(38px * var(--scale));
+}
+
+.milyang-recharge1-menu-line-2 {
+  top: calc(52px * var(--scale));
+}
+
+.milyang-recharge1-menu-line-3 {
+  top: calc(66px * var(--scale));
+}
+
+.milyang-recharge1-main-divider {
+  width: calc(604px * var(--scale));
+  height: 0;
+  left: calc(53px * var(--scale));
+  top: calc(264px * var(--scale));
+  position: absolute;
+  outline: calc(2px * var(--scale)) #ff9fcd solid;
+  outline-offset: calc(-1px * var(--scale));
+}
+
+.milyang-recharge1-profile-circle {
+  width: calc(120px * var(--scale));
+  height: calc(120px * var(--scale));
+  left: calc(55px * var(--scale));
+  top: calc(119px * var(--scale));
+  position: absolute;
+  background: #c98da9;
+  border-radius: calc(9999px * var(--scale));
+}
+
+.milyang-recharge1-profile-image {
+  width: calc(79px * var(--scale));
+  height: calc(50px * var(--scale));
+  left: calc(140px * var(--scale));
+  top: calc(153px * var(--scale));
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.milyang-recharge1-available-amount-label {
+  left: calc(217px * var(--scale));
+  top: calc(144px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(25px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-available-amount-value {
+  left: calc(217px * var(--scale));
+  top: calc(177px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(38px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-balance-section {
+  width: calc(602px * var(--scale));
+  height: calc(74px * var(--scale));
+  left: calc(53px * var(--scale));
+  position: absolute;
+  background: #f9a7cd;
+}
+
+.milyang-recharge1-balance-section-1 {
+  top: calc(285px * var(--scale));
+}
+
+.milyang-recharge1-balance-section-2 {
+  top: calc(371px * var(--scale));
+}
+
+.milyang-recharge1-balance-label {
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+  left: calc(93px * var(--scale));
+}
+
+.milyang-recharge1-balance-label-1 {
+  top: calc(306px * var(--scale));
+}
+
+.milyang-recharge1-balance-label-2 {
+  top: calc(393px * var(--scale));
+}
+
+.milyang-recharge1-balance-icon {
+  width: calc(26px * var(--scale));
+  height: calc(26px * var(--scale));
+  left: calc(212px * var(--scale));
+  top: calc(309px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge1-balance-amount {
+  left: calc(548px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge1-balance-amount-1 {
+  top: calc(305px * var(--scale));
+}
+
+.milyang-recharge1-balance-amount-2 {
+  top: calc(391px * var(--scale));
+}
+
+.milyang-recharge1-amount-value {
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-arrow {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-bottom-nav {
+  width: calc(720px * var(--scale));
+  height: calc(83px * var(--scale));
+  left: 0;
+  top: calc(468px * var(--scale));
+  position: absolute;
+  background: #f596c0;
+}
+
+.milyang-recharge1-nav-icon {
+  width: calc(50px * var(--scale));
+  height: calc(50px * var(--scale));
+  position: absolute;
+  top: calc(485px * var(--scale));
+}
+
+.milyang-recharge1-nav-icon-1 {
+  left: calc(67px * var(--scale));
+}
+
+.milyang-recharge1-nav-icon-2 {
+  left: calc(272px * var(--scale));
+}
+
+.milyang-recharge1-nav-icon-3 {
+  left: calc(494px * var(--scale));
+}
+
+.milyang-recharge1-nav-label {
+  position: absolute;
+  color: white;
+  font-size: calc(27px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+  top: calc(493px * var(--scale));
+}
+
+.milyang-recharge1-nav-label-1 {
+  left: calc(125px * var(--scale));
+}
+
+.milyang-recharge1-nav-label-2 {
+  left: calc(330px * var(--scale));
+}
+
+.milyang-recharge1-nav-label-3 {
+  left: calc(552px * var(--scale));
+  top: calc(494px * var(--scale));
+}
+
+.milyang-recharge1-benefits-container {
+  width: calc(640px * var(--scale));
+  height: calc(316px * var(--scale));
+  left: calc(40px * var(--scale));
+  top: calc(576px * var(--scale));
+  position: absolute;
+  border-radius: calc(5px * var(--scale));
+  border: calc(2px * var(--scale)) #cdcdcd solid;
+}
+
+.milyang-recharge1-benefits-header {
+  width: calc(636px * var(--scale));
+  height: calc(96px * var(--scale));
+  left: calc(2px * var(--scale));
+  top: calc(2px * var(--scale));
+  position: absolute;
+  background: #eeeeee;
+  border-top-left-radius: calc(3px * var(--scale));
+  border-top-right-radius: calc(3px * var(--scale));
+}
+
+.milyang-recharge1-benefits-title {
+  left: calc(33px * var(--scale));
+  top: calc(31px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge1-month {
+  color: black;
+  font-size: calc(34px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-benefits-text {
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-status-badge {
+  width: calc(84px * var(--scale));
+  height: calc(37px * var(--scale));
+  left: calc(158px * var(--scale));
+  top: calc(33px * var(--scale));
+  position: absolute;
+  background: #5681f2;
+  border-radius: calc(22px * var(--scale));
+}
+
+.milyang-recharge1-status-text {
+  left: calc(11px * var(--scale));
+  top: calc(7px * var(--scale));
+  position: absolute;
+  color: white;
+  font-size: calc(20px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-incentive-label {
+  left: calc(38px * var(--scale));
+  top: calc(119px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-incentive-value {
+  left: calc(467px * var(--scale));
+  top: calc(115px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge1-percentage {
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-earn-text {
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-max-incentive-value {
+  left: calc(449px * var(--scale));
+  top: calc(178px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(32px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-max-incentive-label {
+  left: calc(38px * var(--scale));
+  top: calc(181px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-divider-line {
+  width: calc(568px * var(--scale));
+  height: 0;
+  left: calc(36px * var(--scale));
+  top: calc(166px * var(--scale));
+  position: absolute;
+  outline: calc(3px * var(--scale)) #eeeeee solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge1-benefits-footer {
+  width: calc(577px * var(--scale));
+  height: calc(64px * var(--scale));
+  left: calc(31px * var(--scale));
+  top: calc(227px * var(--scale));
+  position: absolute;
+  background: #eeeeee;
+}
+
+.milyang-recharge1-benefits-more {
+  left: calc(220px * var(--scale));
+  top: calc(17px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(24px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-coupon-container {
+  width: calc(640px * var(--scale));
+  height: calc(265px * var(--scale));
+  left: calc(40px * var(--scale));
+  top: calc(908px * var(--scale));
+  position: absolute;
+  border-radius: calc(5px * var(--scale));
+  border: calc(2px * var(--scale)) #cdcdcd solid;
+}
+
+.milyang-recharge1-coupon-label {
+  left: calc(38px * var(--scale));
+  top: calc(29px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-coupon-count {
+  left: calc(548px * var(--scale));
+  top: calc(26px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(35px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-total-benefits-value {
+  left: calc(548px * var(--scale));
+  top: calc(112px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(35px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-total-benefits-label {
+  left: calc(38px * var(--scale));
+  top: calc(111px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(30px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-coupon-divider {
+  width: calc(568px * var(--scale));
+  height: 0;
+  left: calc(36px * var(--scale));
+  top: calc(88px * var(--scale));
+  position: absolute;
+  outline: calc(3px * var(--scale)) #eeeeee solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge1-monthly-benefits {
+  width: calc(590px * var(--scale));
+  height: calc(64px * var(--scale));
+  left: calc(25px * var(--scale));
+  top: calc(178px * var(--scale));
+  position: absolute;
+  background: #f5f5f5;
+}
+
+.milyang-recharge1-monthly-benefits-label {
+  left: calc(29px * var(--scale));
+  top: calc(18px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(24px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-monthly-benefits-value {
+  left: calc(521px * var(--scale));
+  top: calc(16px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-recharge1-bottom-image {
+  width: calc(640px * var(--scale));
+  height: calc(245px * var(--scale));
+  left: calc(40px * var(--scale));
+  top: calc(1188px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge2-main-container {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: 0 calc(4px * var(--scale)) calc(20px * var(--scale))
+    rgba(0, 0, 0, 0.15);
+}
+
+/* Back button */
+.milyang-recharge2-back-button {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(657px * var(--scale));
+  top: calc(45px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge2-back-arrow-1 {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge2-back-arrow-2 {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(-21px * var(--scale));
+  top: calc(25px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+/* Title */
+.milyang-recharge2-title {
+  left: calc(195px * var(--scale));
+  top: calc(178px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(42px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+/* Password dots container */
+.milyang-recharge2-password-container {
+  display: flex;
+  justify-content: center;
+  gap: calc(10px * var(--scale));
+  position: absolute;
+  left: calc(205px * var(--scale));
+  top: calc(257px * var(--scale));
+}
+
+.milyang-recharge2-password-dot {
+  width: calc(36px * var(--scale));
+  height: calc(36px * var(--scale));
+  border-radius: calc(9999px * var(--scale));
+  border: calc(3px * var(--scale)) #dadada solid;
+}
+
+/* Face authentication button */
+.milyang-recharge2-face-auth-button {
+  width: calc(332px * var(--scale));
+  height: calc(55px * var(--scale));
+  left: calc(194px * var(--scale));
+  top: calc(342px * var(--scale));
+  position: absolute;
+  border: calc(3px * var(--scale)) #26323e solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.milyang-recharge2-face-auth-text {
+  color: #26323e;
+  font-size: calc(28px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* Forgot password link */
+.milyang-recharge2-forgot-password {
+  left: calc(204px * var(--scale));
+  top: calc(635px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(31px * var(--scale));
+  font-family: "Istok Web", sans-serif;
+  font-weight: 700;
+  text-decoration: underline;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+/* Keyboard indicator */
+.milyang-recharge2-keyboard-indicator {
+  width: calc(720px * var(--scale));
+  height: calc(58px * var(--scale));
+  left: 0;
+  top: calc(710px * var(--scale));
+  position: absolute;
+  background: #26323e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge2-keyboard-text {
+  color: white;
+  font-size: calc(26px * var(--scale));
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* Number pad background */
+.milyang-recharge2-numpad-background {
+  width: calc(720px * var(--scale));
+  height: calc(512px * var(--scale));
+  left: 0;
+  top: calc(768px * var(--scale));
+  position: absolute;
+  background: #2d3e50;
+}
+
+/* Horizontal lines */
+.milyang-recharge2-line {
+  width: calc(720px * var(--scale));
+  height: 0;
+  left: 0;
+  position: absolute;
+  outline: calc(4px * var(--scale)) #334456 solid;
+  outline-offset: calc(-2px * var(--scale));
+}
+
+.milyang-recharge2-line-1 {
+  top: calc(768px * var(--scale));
+}
+
+.milyang-recharge2-line-2 {
+  top: calc(898px * var(--scale));
+}
+
+.milyang-recharge2-line-3 {
+  top: calc(1026px * var(--scale));
+}
+
+.milyang-recharge2-line-4 {
+  top: calc(1154px * var(--scale));
+}
+
+/* Vertical lines */
+.milyang-recharge2-vline {
+  width: calc(512px * var(--scale));
+  height: 0;
+  position: absolute;
+  outline: calc(4px * var(--scale)) #334456 solid;
+  outline-offset: calc(-2px * var(--scale));
+}
+
+.milyang-recharge2-vline-1 {
+  left: calc(242px * var(--scale));
+  top: calc(1280px * var(--scale));
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+
+.milyang-recharge2-vline-2 {
+  left: calc(481px * var(--scale));
+  top: calc(1281px * var(--scale));
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+
+/* Number buttons */
+.milyang-recharge2-number {
+  position: absolute;
+  color: white;
+  font-size: calc(36px * var(--scale));
+  font-family: "Istok Web", sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.milyang-recharge2-number:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.milyang-recharge2-number-1 {
+  left: calc(555px * var(--scale));
+  top: calc(785px * var(--scale));
+}
+
+.milyang-recharge2-number-2 {
+  left: calc(330px * var(--scale));
+  top: calc(785px * var(--scale));
+}
+
+.milyang-recharge2-number-3 {
+  left: calc(100px * var(--scale));
+  top: calc(785px * var(--scale));
+}
+
+.milyang-recharge2-number-4 {
+  left: calc(330px * var(--scale));
+  top: calc(910px * var(--scale));
+}
+
+.milyang-recharge2-number-5 {
+  left: calc(555px * var(--scale));
+  top: calc(910px * var(--scale));
+}
+
+.milyang-recharge2-number-6 {
+  left: calc(330px * var(--scale));
+  top: calc(1160px * var(--scale));
+}
+
+.milyang-recharge2-number-7 {
+  left: calc(100px * var(--scale));
+  top: calc(1030px * var(--scale));
+}
+
+.milyang-recharge2-number-8 {
+  left: calc(330px * var(--scale));
+  top: calc(1030px * var(--scale));
+}
+
+.milyang-recharge2-number-9 {
+  left: calc(555px * var(--scale));
+  top: calc(1030px * var(--scale));
+}
+
+.milyang-recharge2-number-0 {
+  left: calc(100px * var(--scale));
+  top: calc(910px * var(--scale));
+}
+
+/* Delete button */
+.milyang-recharge2-delete-button {
+  width: calc(53px * var(--scale));
+  height: calc(53px * var(--scale));
+  left: calc(572px * var(--scale));
+  top: calc(1191px * var(--scale));
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge2-delete-icon {
+  color: white;
+  font-size: calc(30px * var(--scale));
+}
+
+/* Success overlay */
+.milyang-recharge2-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.milyang-recharge2-success-modal {
+  background: white;
+  padding: calc(32px * var(--scale));
+  border-radius: calc(8px * var(--scale));
+  box-shadow: 0 calc(8px * var(--scale)) calc(32px * var(--scale))
+    rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.milyang-recharge2-success-icon {
+  color: #22c55e;
+  font-size: calc(64px * var(--scale));
+  margin-bottom: calc(16px * var(--scale));
+}
+
+.milyang-recharge2-success-text {
+  font-size: calc(24px * var(--scale));
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+-button {
+  width: calc(53px * var(--scale));
+  height: calc(53px * var(--scale));
+  left: calc(572px * var(--scale));
+  top: calc(1191px * var(--scale));
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-security2-delete-icon {
+  color: white;
+  font-size: calc(30px * var(--scale));
+}
+
+/* Success overlay */
+.milyang-security2-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.milyang-security2-success-modal {
+  background: white;
+  padding: calc(32px * var(--scale));
+  border-radius: calc(8px * var(--scale));
+  box-shadow: 0 calc(8px * var(--scale)) calc(32px * var(--scale))
+    rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.milyang-security2-success-icon {
+  color: #22c55e;
+  font-size: calc(64px * var(--scale));
+  margin-bottom: calc(16px * var(--scale));
+}
+
+.milyang-security2-success-text {
+  font-size: calc(24px * var(--scale));
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+/* 페이지 3 스타일 */
+.milyang-recharge3-container {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: 0 calc(4px * var(--scale)) calc(20px * var(--scale))
+    rgba(0, 0, 0, 0.15);
+}
+
+.milyang-recharge3-bg-image {
+  width: calc(350px * var(--scale));
+  height: calc(553 * var(--scale));
+  left: calc(185px * var(--scale));
+  top: calc(-350px * var(--scale));
+  position: absolute;
+  object-fit: cover;
+  border-radius: calc(15px * var(--scale));
+}
+
+.milyang-recharge3-card-title {
+  left: calc(224px * var(--scale));
+  top: calc(273px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(29px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-amount {
+  left: calc(260px * var(--scale));
+  top: calc(315px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge3-amount-number {
+  color: black;
+  font-size: calc(39px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-amount-unit {
+  color: black;
+  font-size: calc(39px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-auto-setting {
+  width: calc(254px * var(--scale));
+  height: calc(65px * var(--scale));
+  left: calc(233px * var(--scale));
+  top: calc(388px * var(--scale));
+  position: absolute;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge3-auto-text {
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-bank-info {
+  width: calc(641px * var(--scale));
+  height: calc(72px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(479px * var(--scale));
+  position: absolute;
+  background: white;
+  box-shadow: 0px 0px calc(10px * var(--scale)) calc(3px * var(--scale))
+    rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(44px * var(--scale));
+}
+
+.milyang-recharge3-bank-name {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-account {
+  margin-left: calc(40px * var(--scale));
+}
+
+.milyang-recharge3-divider {
+  color: #8d8d8d;
+  font-size: calc(20px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-account-number {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-limit-info {
+  left: calc(283px * var(--scale));
+  top: calc(599px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge3-limit-text {
+  color: #595959;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-limit-amount {
+  color: #595959;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-info-icon {
+  width: calc(40px * var(--scale));
+  height: calc(40px * var(--scale));
+  left: calc(640px * var(--scale));
+  top: calc(596px * var(--scale));
+  position: absolute;
+  background: #d9d9d9;
+  border-radius: calc(9999px * var(--scale));
+}
+
+.milyang-recharge3-amount-container {
+  width: calc(641px * var(--scale));
+  height: calc(160px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(644px * var(--scale));
+  position: absolute;
+  background: white;
+  border: calc(2px * var(--scale)) #cecece solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(44px * var(--scale));
+}
+
+.milyang-recharge3-current-amount {
+  color: #828282;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-edit-icon {
+  width: calc(41px * var(--scale));
+  height: calc(41px * var(--scale));
+}
+
+.milyang-recharge3-quick-buttons {
+  display: flex;
+  gap: calc(8px * var(--scale));
+  position: absolute;
+  left: calc(39px * var(--scale));
+  top: calc(750px * var(--scale));
+}
+
+.milyang-recharge3-quick-btn {
+  height: calc(54px * var(--scale));
+  background: white;
+  border: calc(2px * var(--scale)) #cecece solid;
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-family: Inter;
+  font-weight: 700;
+  word-wrap: break-word;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.milyang-recharge3-quick-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.milyang-recharge3-quick-btn-1 {
+  width: calc(218px * var(--scale));
+}
+
+.milyang-recharge3-quick-btn-2 {
+  width: calc(226px * var(--scale));
+}
+
+.milyang-recharge3-quick-btn-3 {
+  width: calc(215px * var(--scale));
+}
+
+.milyang-recharge3-max-benefit {
+  width: calc(641px * var(--scale));
+  height: calc(73px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(816px * var(--scale));
+  position: absolute;
+  background: #717171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge3-max-text {
+  color: white;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-incentive-info {
+  width: calc(641px * var(--scale));
+  height: calc(123px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(911px * var(--scale));
+  position: absolute;
+  background: white;
+  box-shadow: 0px 0px calc(10px * var(--scale)) calc(3px * var(--scale))
+    rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(44px * var(--scale));
+}
+
+.milyang-recharge3-incentive-icon {
+  width: calc(78px * var(--scale));
+  height: calc(60px * var(--scale));
+  margin-right: calc(26px * var(--scale));
+}
+
+.milyang-recharge3-incentive-text {
+  flex: 1;
+}
+
+.milyang-recharge3-incentive-rate {
+  margin-bottom: calc(8px * var(--scale));
+}
+
+.milyang-recharge3-rate-number {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-rate-text {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-incentive-desc {
+  color: black;
+  font-size: calc(23px * var(--scale));
+  font-family: Inter;
+  font-weight: 500;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-arrow-up {
+  width: calc(25px * var(--scale));
+  height: calc(13px * var(--scale));
+  transform: rotate(180deg);
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge3-info-section {
+  position: absolute;
+  left: calc(64px * var(--scale));
+  top: calc(1053px * var(--scale));
+}
+
+.milyang-recharge3-info-text {
+  color: black;
+  font-size: calc(24px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(57px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge3-arrow-down-1 {
+  width: calc(21px * var(--scale));
+  height: calc(11px * var(--scale));
+  position: absolute;
+  left: calc(570px * var(--scale));
+  top: calc(17px * var(--scale));
+  transform: rotate(90deg);
+  outline: calc(3px * var(--scale)) #424141 solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge3-arrow-down-2 {
+  width: calc(21px * var(--scale));
+  height: calc(11px * var(--scale));
+  position: absolute;
+  left: calc(570px * var(--scale));
+  top: calc(76px * var(--scale));
+  transform: rotate(90deg);
+  outline: calc(3px * var(--scale)) #424141 solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge3-divider {
+  width: calc(596px * var(--scale));
+  height: 0;
+  left: calc(62px * var(--scale));
+  top: calc(1109px * var(--scale));
+  position: absolute;
+  outline: calc(2px * var(--scale)) #e0e0e0 solid;
+  outline-offset: calc(-1px * var(--scale));
+}
+
+.milyang-recharge3-charge-btn {
+  width: calc(720px * var(--scale));
+  height: calc(95px * var(--scale));
+  left: 0;
+  top: calc(1177px * var(--scale));
+  position: absolute;
+  background: #e86696;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.milyang-recharge3-charge-btn:hover {
+  background: #d65584;
+}
+
+.milyang-recharge3-charge-text {
+  color: white;
+  font-size: calc(30px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+.milyang-recharge4-container {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: 0 calc(4px * var(--scale)) calc(20px * var(--scale))
+    rgba(0, 0, 0, 0.15);
+}
+
+.milyang-recharge4-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.milyang-recharge4-bg-image {
+  width: calc(553px * var(--scale));
+  height: calc(350px * var(--scale));
+  left: calc(535px * var(--scale));
+  top: calc(-331px * var(--scale));
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.milyang-recharge4-card-title {
+  left: calc(224px * var(--scale));
+  top: calc(273px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(29px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-amount {
+  left: calc(327px * var(--scale));
+  top: calc(315px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge4-amount-number {
+  color: black;
+  font-size: calc(39px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-amount-unit {
+  color: black;
+  font-size: calc(39px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-auto-setting {
+  width: calc(254px * var(--scale));
+  height: calc(65px * var(--scale));
+  left: calc(233px * var(--scale));
+  top: calc(388px * var(--scale));
+  position: absolute;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge4-auto-text {
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-bank-info {
+  width: calc(641px * var(--scale));
+  height: calc(72px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(479px * var(--scale));
+  position: absolute;
+  background: white;
+  box-shadow: 0px 0px calc(10px * var(--scale)) calc(3px * var(--scale))
+    rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(44px * var(--scale));
+}
+
+.milyang-recharge4-bank-name {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-account {
+  margin-left: calc(40px * var(--scale));
+}
+
+.milyang-recharge4-divider {
+  color: #8d8d8d;
+  font-size: calc(20px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-account-number {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-limit-info {
+  left: calc(283px * var(--scale));
+  top: calc(599px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge4-limit-text {
+  color: #595959;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-limit-amount {
+  color: #595959;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-info-icon {
+  width: calc(40px * var(--scale));
+  height: calc(40px * var(--scale));
+  left: calc(640px * var(--scale));
+  top: calc(596px * var(--scale));
+  position: absolute;
+  background: #d9d9d9;
+  border-radius: calc(9999px * var(--scale));
+}
+
+.milyang-recharge4-amount-container {
+  width: calc(641px * var(--scale));
+  height: calc(160px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(644px * var(--scale));
+  position: absolute;
+  background: white;
+  border: calc(2px * var(--scale)) #cecece solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(44px * var(--scale));
+}
+
+.milyang-recharge4-current-amount {
+  color: #828282;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 800;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-edit-icon {
+  width: calc(41px * var(--scale));
+  height: calc(41px * var(--scale));
+}
+
+.milyang-recharge4-quick-buttons {
+  display: flex;
+  gap: calc(8px * var(--scale));
+  position: absolute;
+  left: calc(39px * var(--scale));
+  top: calc(750px * var(--scale));
+}
+
+.milyang-recharge4-quick-btn {
+  height: calc(54px * var(--scale));
+  background: white;
+  border: calc(2px * var(--scale)) #cecece solid;
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-family: Inter;
+  font-weight: 700;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge4-quick-btn-1 {
+  width: calc(218px * var(--scale));
+}
+
+.milyang-recharge4-quick-btn-2 {
+  width: calc(226px * var(--scale));
+}
+
+.milyang-recharge4-quick-btn-3 {
+  width: calc(215px * var(--scale));
+}
+
+.milyang-recharge4-max-benefit {
+  width: calc(641px * var(--scale));
+  height: calc(73px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(816px * var(--scale));
+  position: absolute;
+  background: #717171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge4-max-text {
+  color: white;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-incentive-info {
+  width: calc(641px * var(--scale));
+  height: calc(123px * var(--scale));
+  left: calc(39px * var(--scale));
+  top: calc(911px * var(--scale));
+  position: absolute;
+  background: white;
+  box-shadow: 0px 0px calc(10px * var(--scale)) calc(3px * var(--scale))
+    rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 0 calc(44px * var(--scale));
+}
+
+.milyang-recharge4-incentive-icon {
+  width: calc(78px * var(--scale));
+  height: calc(60px * var(--scale));
+  margin-right: calc(26px * var(--scale));
+}
+
+.milyang-recharge4-incentive-text {
+  flex: 1;
+}
+
+.milyang-recharge4-incentive-rate {
+  margin-bottom: calc(8px * var(--scale));
+}
+
+.milyang-recharge4-rate-number {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-rate-text {
+  color: black;
+  font-size: calc(26px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-incentive-desc {
+  color: black;
+  font-size: calc(23px * var(--scale));
+  font-family: Inter;
+  font-weight: 500;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-arrow-up {
+  width: calc(25px * var(--scale));
+  height: calc(13px * var(--scale));
+  transform: rotate(180deg);
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge4-info-section {
+  position: absolute;
+  left: calc(64px * var(--scale));
+  top: calc(1053px * var(--scale));
+}
+
+.milyang-recharge4-info-text {
+  color: black;
+  font-size: calc(24px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(57px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-arrow-down-1 {
+  width: calc(21px * var(--scale));
+  height: calc(11px * var(--scale));
+  position: absolute;
+  left: calc(570px * var(--scale));
+  top: calc(17px * var(--scale));
+  transform: rotate(90deg);
+  outline: calc(3px * var(--scale)) #424141 solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge4-arrow-down-2 {
+  width: calc(21px * var(--scale));
+  height: calc(11px * var(--scale));
+  position: absolute;
+  left: calc(570px * var(--scale));
+  top: calc(76px * var(--scale));
+  transform: rotate(90deg);
+  outline: calc(3px * var(--scale)) #424141 solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge4-charge-btn {
+  width: calc(720px * var(--scale));
+  height: calc(95px * var(--scale));
+  left: 0;
+  top: calc(1177px * var(--scale));
+  position: absolute;
+  background: #e86696;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge4-charge-text {
+  color: white;
+  font-size: calc(30px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+/* 모달 스타일 */
+.milyang-recharge4-modal-overlay {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge4-modal-content {
+  width: calc(574px * var(--scale));
+  height: calc(650px * var(--scale));
+  background: white;
+  position: relative;
+  padding: calc(46px * var(--scale)) calc(44px * var(--scale));
+}
+
+.milyang-recharge4-modal-title {
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  word-wrap: break-word;
+  margin-bottom: calc(55px * var(--scale));
+}
+
+.milyang-recharge4-modal-divider {
+  width: calc(486px * var(--scale));
+  height: 0;
+  outline: calc(4px * var(--scale)) #f3f3f3 solid;
+  outline-offset: calc(-2px * var(--scale));
+  margin-bottom: calc(33px * var(--scale));
+}
+
+.milyang-recharge4-modal-text {
+  color: #6b6b6b;
+  font-size: calc(25px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+  margin-bottom: calc(175px * var(--scale));
+}
+
+.milyang-recharge4-modal-buttons {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.milyang-recharge4-modal-btn {
+  width: calc(287px * var(--scale));
+  height: calc(91px * var(--scale));
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(28px * var(--scale));
+  font-family: Inter;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge4-close-btn {
+  background: #e5e5e5;
+  color: black;
+}
+
+.milyang-recharge4-close-number {
+  font-weight: 900;
+}
+
+.milyang-recharge4-close-text {
+  font-weight: 600;
+}
+
+.milyang-recharge4-confirm-btn {
+  background: #e86696;
+  color: white;
+  font-weight: 900;
+}
+
+.milyang-recharge4-modal-btn:hover {
+  opacity: 0.9;
+}
+.milyang-recharge5-container {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: 0 calc(4px * var(--scale)) calc(20px * var(--scale))
+    rgba(0, 0, 0, 0.15);
+}
+
+.milyang-recharge5-overlay {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.milyang-recharge5-modal {
+  width: calc(633px * var(--scale));
+  height: calc(450px * var(--scale));
+  left: calc(43px * var(--scale));
+  top: calc(395px * var(--scale));
+  position: absolute;
+  background: white;
+}
+
+.milyang-recharge5-title {
+  left: calc(48px * var(--scale));
+  top: calc(33px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.milyang-recharge5-info-section {
+  position: absolute;
+  left: calc(48px * var(--scale));
+  top: calc(112px * var(--scale));
+  display: flex;
+  justify-content: space-between;
+  width: calc(537px * var(--scale));
+}
+
+.milyang-recharge5-labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.milyang-recharge5-label {
+  color: #7b7b7b;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 700;
+  line-height: calc(46px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge5-values {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.milyang-recharge5-card-name {
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 700;
+  line-height: calc(46px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge5-amount {
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  line-height: calc(46px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge5-divider {
+  width: calc(541px * var(--scale));
+  height: 0;
+  left: calc(46px * var(--scale));
+  top: calc(233px * var(--scale));
+  position: absolute;
+  outline: calc(4px * var(--scale)) #eaeaea solid;
+  outline-offset: calc(-2px * var(--scale));
+}
+
+.milyang-recharge5-incentive-section {
+  position: absolute;
+  left: calc(48px * var(--scale));
+  top: calc(250px * var(--scale));
+  display: flex;
+  justify-content: space-between;
+  width: calc(537px * var(--scale));
+}
+
+.milyang-recharge5-incentive-label {
+  color: #e86696;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 700;
+  line-height: calc(46px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge5-incentive-amount {
+  color: #e86696;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  line-height: calc(46px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge5-buttons {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.milyang-recharge5-btn {
+  height: calc(91px * var(--scale));
+  border: none;
+  cursor: pointer;
+  font-size: calc(28px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  line-height: calc(32px * var(--scale));
+  word-wrap: break-word;
+  transition: opacity 0.2s;
+}
+
+.milyang-recharge5-btn:hover {
+  opacity: 0.9;
+}
+
+.milyang-recharge5-cancel-btn {
+  width: calc(236px * var(--scale));
+  background: #e5e5e5;
+  color: black;
+}
+
+.milyang-recharge5-confirm-btn {
+  width: calc(397px * var(--scale));
+  background: #e86696;
+  color: white;
+}
+.milyang-recharge6-container {
+  width: calc(720px * var(--scale));
+  height: calc(1280px * var(--scale));
+  position: relative;
+  background: white;
+  overflow: hidden;
+  border-radius: calc(20px * var(--scale));
+  box-shadow: 0 calc(4px * var(--scale)) calc(20px * var(--scale))
+    rgba(0, 0, 0, 0.15);
+}
+
+/* 헤더 */
+.milyang-recharge6-header {
+  position: relative;
+  padding-top: calc(18px * var(--scale));
+}
+
+.milyang-recharge6-header-icon {
+  width: calc(46px * var(--scale));
+  height: calc(46px * var(--scale));
+  left: calc(44px * var(--scale));
+  top: calc(18px * var(--scale));
+  position: absolute;
+}
+
+.milyang-recharge6-header-text {
+  left: calc(22px * var(--scale));
+  top: calc(65px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(24px * var(--scale));
+  font-family: Inter;
+  font-weight: 500;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge6-back-button {
+  position: absolute;
+  right: calc(32px * var(--scale));
+  top: calc(52px * var(--scale));
+}
+
+.milyang-recharge6-back-arrow-1 {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  position: absolute;
+  transform: rotate(135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+.milyang-recharge6-back-arrow-2 {
+  width: calc(34.47px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(-21px * var(--scale));
+  top: calc(25px * var(--scale));
+  position: absolute;
+  transform: rotate(-135deg);
+  transform-origin: top left;
+  outline: calc(3px * var(--scale)) black solid;
+  outline-offset: calc(-1.5px * var(--scale));
+}
+
+/* 카드 섹션 */
+.milyang-recharge6-card-section {
+  position: relative;
+  margin-top: calc(50px * var(--scale));
+}
+
+.milyang-recharge6-completion-badge {
+  width: calc(208px * var(--scale));
+  height: calc(32px * var(--scale));
+  left: calc(256px * var(--scale));
+  top: calc(137px * var(--scale));
+  position: absolute;
+  background: #ff9622;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milyang-recharge6-completion-text {
+  color: white;
+  font-size: calc(21px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge6-card-title {
+  left: calc(192px * var(--scale));
+  top: calc(181px * var(--scale));
+  position: absolute;
+  color: black;
+  font-size: calc(37px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge6-card-container {
+  position: relative;
+}
+
+.milyang-recharge6-card-image {
+  width: calc(350px * var(--scale));
+  height: calc(553px * var(--scale));
+  left: calc(185px * var(--scale));
+  top: calc(250px * var(--scale));
+  position: absolute;
+  object-fit: cover;
+  border-radius: calc(15px * var(--scale));
+}
+
+.milyang-recharge6-card-border {
+  width: calc(350px * var(--scale));
+  height: calc(553px * var(--scale));
+  left: calc(185px * var(--scale));
+  top: calc(250px * var(--scale));
+  position: absolute;
+  border: calc(3px * var(--scale)) #cccccc solid;
+  border-radius: calc(15px * var(--scale));
+}
+
+.milyang-recharge6-card-circle {
+  width: calc(55px * var(--scale));
+  height: calc(55px * var(--scale));
+  left: calc(200px * var(--scale));
+  top: calc(280px * var(--scale));
+  position: absolute;
+  background: white;
+  border-radius: calc(9999px * var(--scale));
+}
+
+/* 카드 정보 버튼 */
+.milyang-recharge6-info-button {
+  width: calc(291px * var(--scale));
+  height: calc(56px * var(--scale));
+  left: calc(214px * var(--scale));
+  top: calc(835px * var(--scale));
+  position: absolute;
+  border-radius: calc(7px * var(--scale));
+  border: calc(3px * var(--scale)) #3c3c3c solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(20px * var(--scale));
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.milyang-recharge6-info-button:hover {
+  background-color: #f5f5f5;
+}
+
+.milyang-recharge6-info-text {
+  color: black;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge6-info-icon {
+  width: calc(42px * var(--scale));
+  height: calc(37px * var(--scale));
+}
+
+/* 사용 가능 금액 */
+.milyang-recharge6-balance-container {
+  width: calc(628px * var(--scale));
+  height: calc(105px * var(--scale));
+  left: calc(46px * var(--scale));
+  top: calc(922px * var(--scale));
+  position: absolute;
+  background: #2d3451;
+  border-radius: calc(15px * var(--scale));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(64px * var(--scale));
+  box-sizing: border-box;
+}
+
+.milyang-recharge6-balance-label {
+  color: white;
+  font-size: calc(27px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge6-balance-amount {
+  color: white;
+  font-size: calc(32px * var(--scale));
+  font-family: Inter;
+  font-weight: 900;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
+
+.milyang-recharge6-balance-arrow {
+  width: calc(34px * var(--scale));
+  height: calc(17px * var(--scale));
+  outline: calc(4px * var(--scale)) white solid;
+  outline-offset: calc(-2px * var(--scale));
+}
+
+/* 하단 네비게이션 */
+.milyang-recharge6-navigation {
+  position: absolute;
+  bottom: calc(77px * var(--scale));
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.milyang-recharge6-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.milyang-recharge6-nav-item:hover {
+  opacity: 0.7;
+}
+
+.milyang-recharge6-nav-icon {
+  width: calc(89px * var(--scale));
+  height: calc(78px * var(--scale));
+  margin-bottom: calc(7px * var(--scale));
+}
+
+.milyang-recharge6-nav-text {
+  color: black;
+  font-size: calc(28px * var(--scale));
+  font-family: Inter;
+  font-weight: 600;
+  line-height: calc(37px * var(--scale));
+  word-wrap: break-word;
+}
