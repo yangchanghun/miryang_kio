@@ -15,7 +15,7 @@ export default function Home() {
       id: "ddangyo",
       title: "땡겨요",
       image: "/icon/ddangyo.png",
-      route: "/ddangyo/popup/",
+      route: "/miryang/ddangyo/popup/",
       color: "#f771c3ff",
       type: "internal",
     },
