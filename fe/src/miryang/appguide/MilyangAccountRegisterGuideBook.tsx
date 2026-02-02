@@ -1,5 +1,5 @@
 // MilyangAccountRegisterGuideBook.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import "./MilyangAccountRegisterGuideBook.css"; // CSS 파일 import
 import HomeButton from "../../utils/HomeButton";
 import { useNavigate } from "react-router-dom";
