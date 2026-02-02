@@ -154,7 +154,7 @@ function RegisterCardGuide() {
         </>
       ) : (
         <>
-          <CompletePage windowHeight={windowHeight} navigate={navigate} />
+          <CompletePage windowHeight={windowHeight} />
           <audio src="/milyangvoice/2/6.mp3" autoPlay></audio>
 
           <div
@@ -182,8 +182,12 @@ function RegisterCardGuide() {
     </div>
   );
 }
+type MilyangApp1Props = {
+  windowHeight: number;
+  onCardRegister: () => void;
+};
 
-const MilyangApp_1 = ({ windowHeight, onCardRegister }) => {
+const MilyangApp_1 = ({ windowHeight, onCardRegister }: MilyangApp1Props) => {
   // 화면 높이에 따라 스케일 조정
   const getScale = () => {
     if (windowHeight >= 1000) {
@@ -326,12 +330,14 @@ const MilyangApp_1 = ({ windowHeight, onCardRegister }) => {
             boxShadow: "0 4px 15px rgba(232, 102, 150, 0.4)",
           }}
           onMouseEnter={(e) => {
-            e.target.style.transform = "scale(1.05)";
-            e.target.style.boxShadow = "0 6px 20px rgba(232, 102, 150, 0.6)";
+            e.currentTarget.style.transform = "scale(1.05)";
+            e.currentTarget.style.boxShadow =
+              "0 6px 20px rgba(232, 102, 150, 0.6)";
           }}
           onMouseLeave={(e) => {
-            e.target.style.transform = "scale(1)";
-            e.target.style.boxShadow = "0 4px 15px rgba(232, 102, 150, 0.4)";
+            e.currentTarget.style.transform = "scale(1)";
+            e.currentTarget.style.boxShadow =
+              "0 4px 15px rgba(232, 102, 150, 0.4)";
           }}
         />
 
@@ -766,7 +772,7 @@ const MilyangApp_1 = ({ windowHeight, onCardRegister }) => {
       </div>
 
       {/* CSS 애니메이션 */}
-      <style jsx>{`
+      <style>{`
         @keyframes pulse {
           0% {
             box-shadow: 0 4px 15px rgba(232, 102, 150, 0.4);
@@ -807,8 +813,16 @@ const MilyangApp_1 = ({ windowHeight, onCardRegister }) => {
     </div>
   );
 };
-
-const PasswordPage = ({ windowHeight, onBack, onComplete }) => {
+type PasswordPageProps = {
+  windowHeight: number;
+  onBack: () => void;
+  onComplete: () => void;
+};
+const PasswordPage = ({
+  windowHeight,
+  onBack,
+  onComplete,
+}: PasswordPageProps) => {
   const [password, setPassword] = useState("");
 
   // 화면 높이에 따라 스케일 조정
@@ -821,7 +835,7 @@ const PasswordPage = ({ windowHeight, onBack, onComplete }) => {
 
   const scale = getScale();
 
-  const handleNumberPress = (number) => {
+  const handleNumberPress = (number: string) => {
     if (password.length < 6) {
       const newPassword = password + number;
       setPassword(newPassword);
@@ -1301,8 +1315,12 @@ const PasswordPage = ({ windowHeight, onBack, onComplete }) => {
     </div>
   );
 };
-
-const TermsPage = ({ windowHeight, onBack, onNext }) => {
+type TermsPageProps = {
+  windowHeight: number;
+  onBack: () => void;
+  onNext: () => void;
+};
+const TermsPage = ({ windowHeight, onBack, onNext }: TermsPageProps) => {
   const [allAgree, setAllAgree] = useState(false);
   const [privacyAgree, setPrivacyAgree] = useState(false);
 
@@ -1642,8 +1660,12 @@ const TermsPage = ({ windowHeight, onBack, onNext }) => {
     </div>
   );
 };
-
-const CameraPage = ({ windowHeight, onBack, onComplete }) => {
+type CameraPageProps = {
+  windowHeight: number;
+  onBack: () => void;
+  onComplete: () => void;
+};
+const CameraPage = ({ windowHeight, onBack, onComplete }: CameraPageProps) => {
   const [showPermissionModal, setShowPermissionModal] = useState(true);
   const [showCameraFlash, setShowCameraFlash] = useState(false);
 
@@ -1670,7 +1692,9 @@ const CameraPage = ({ windowHeight, onBack, onComplete }) => {
           "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+f1snEiCjWL0fPVdyoGw",
         );
         audio.play().catch(() => {}); // 에러 무시
-      } catch (e) {}
+      } catch (e) {
+        console.log("ㅎㅇ", e);
+      }
 
       // 0.3초 후 플래시 효과 제거하고 다음 페이지로 이동
       setTimeout(() => {
@@ -2037,7 +2061,7 @@ const CameraPage = ({ windowHeight, onBack, onComplete }) => {
         )}
 
         {/* 플래시 애니메이션 CSS */}
-        <style jsx>{`
+        <style>{`
           @keyframes flash {
             0% {
               opacity: 0;
@@ -2054,8 +2078,16 @@ const CameraPage = ({ windowHeight, onBack, onComplete }) => {
     </div>
   );
 };
-
-const CardInfoPage = ({ windowHeight, onBack, onComplete }) => {
+type CardInfoPageProps = {
+  windowHeight: number;
+  onBack: () => void;
+  onComplete: () => void;
+};
+const CardInfoPage = ({
+  windowHeight,
+  onBack,
+  onComplete,
+}: CardInfoPageProps) => {
   // 화면 높이에 따라 스케일 조정
   const getScale = () => {
     if (windowHeight >= 1000) {
@@ -2207,10 +2239,10 @@ const CardInfoPage = ({ windowHeight, onBack, onComplete }) => {
             transition: "background-color 0.3s ease",
           }}
           onMouseEnter={(e) => {
-            e.target.style.backgroundColor = "#d14d71";
+            e.currentTarget.style.backgroundColor = "#d14d71";
           }}
           onMouseLeave={(e) => {
-            e.target.style.backgroundColor = "#E86696";
+            e.currentTarget.style.backgroundColor = "#E86696";
           }}
         >
           <div
@@ -2253,8 +2285,10 @@ const CardInfoPage = ({ windowHeight, onBack, onComplete }) => {
     </div>
   );
 };
-
-const CompletePage = ({ windowHeight, navigate }) => {
+type CompletePageProps = {
+  windowHeight: number;
+};
+const CompletePage = ({ windowHeight }: CompletePageProps) => {
   const getScale = () => {
     if (windowHeight >= 1000) {
       return 0.75;

@@ -2,8 +2,24 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MilyangRecharge.css";
 import HomeButton from "../../utils/HomeButton";
+type NextPageProps = {
+  onNextPage: (page?: number) => void;
+};
 
-const MilyangRecharge1 = ({ onNextPage }) => {
+type Recharge5Props = {
+  chargeAmount?: number;
+  onCancel?: () => void;
+  onConfirm?: () => void;
+  onNextPage: () => void;
+};
+
+type Recharge6Props = {
+  chargedAmount?: number;
+  incentiveAmount?: number;
+  onNavigate?: (target: string) => void;
+};
+
+const MilyangRecharge1 = ({ onNextPage }: NextPageProps) => {
   return (
     <div className="milyang-recharge1-container">
       <div className="milyang-recharge1-main-background" />
@@ -65,8 +81,10 @@ const MilyangRecharge1 = ({ onNextPage }) => {
           alt="충전"
         />
         <div
-          onClick={onNextPage}
           className="milyang-recharge1-nav-label milyang-recharge1-nav-label-1 heartbeat"
+          onClick={() => {
+            onNextPage(1);
+          }}
         >
           충전
         </div>
@@ -152,11 +170,10 @@ const MilyangRecharge1 = ({ onNextPage }) => {
   );
 };
 
-const MilyangRecharge2 = ({ onNextPage }) => {
-  const navigate = useNavigate();
+const MilyangRecharge2 = ({ onNextPage }: NextPageProps) => {
   const [password, setPassword] = useState("");
 
-  const handleNumberClick = (num) => {
+  const handleNumberClick = (num: string) => {
     if (password.length < 6) {
       setPassword(password + num);
     }
@@ -326,17 +343,13 @@ const MilyangRecharge2 = ({ onNextPage }) => {
     </div>
   );
 };
-const MilyangRecharge3 = ({ onNextPage }) => {
+const MilyangRecharge3 = ({ onNextPage }: NextPageProps) => {
   const [chargeAmount, setChargeAmount] = useState(100000);
 
-  const handleAmountAdd = (amount) => {
+  const handleAmountAdd = (amount: number) => {
     if (chargeAmount + amount <= 500000) {
       setChargeAmount(chargeAmount + amount);
     }
-  };
-
-  const handleCharge = () => {
-    alert(`${chargeAmount.toLocaleString()}원이 충전되었습니다.`);
   };
 
   return (
@@ -442,20 +455,19 @@ const MilyangRecharge3 = ({ onNextPage }) => {
 
       <div className="milyang-recharge3-divider"></div>
 
-      <button className="milyang-recharge3-charge-btn" onClick={onNextPage}>
+      <button
+        className="milyang-recharge3-charge-btn"
+        onClick={() => {
+          onNextPage(4);
+        }}
+      >
         <div className="milyang-recharge3-charge-tex heartbeat">충전하기</div>
       </button>
     </div>
   );
 };
-
-const MilyangRecharge4 = ({ onClose, onConfirm, onNextPage }) => {
-  const [showModal, setShowModal] = useState(true);
-
-  const handleConfirm = () => {
-    setShowModal(false);
-    if (onConfirm) onConfirm();
-  };
+const MilyangRecharge4 = ({ onNextPage }: { onNextPage: () => void }) => {
+  const [showModal] = useState(true);
 
   if (!showModal) return null;
 
@@ -612,11 +624,10 @@ const MilyangRecharge4 = ({ onClose, onConfirm, onNextPage }) => {
 
 const MilyangRecharge5 = ({
   chargeAmount = 100000,
-  onCancel,
-  onConfirm,
+
   onNextPage,
-}) => {
-  const [showModal, setShowModal] = useState(true);
+}: Recharge5Props) => {
+  const [showModal] = useState(true);
 
   // 인센티브 계산 (10%)
   const incentiveAmount = Math.floor(chargeAmount * 0.1);
@@ -678,7 +689,7 @@ const MilyangRecharge6 = ({
   chargedAmount = 100000,
   incentiveAmount = 10000,
   onNavigate,
-}) => {
+}: Recharge6Props) => {
   // 총 사용 가능 금액 (기존 잔액 + 충전 금액 + 인센티브)
   const totalAmount = chargedAmount + incentiveAmount;
 
@@ -793,7 +804,7 @@ const MilyangRecharge6 = ({
 function MilyangRecharge() {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(0);
-  const handleNextPage = (page) => {
+  const handleNextPage = (page: number) => {
     setCurrentPage(page);
   };
   const voiceArray = [
@@ -827,7 +838,7 @@ function MilyangRecharge() {
       ment: "충전버튼을 선택하시면 충전이 완료됩니다.",
     },
     {
-      component: <MilyangRecharge6 onNextPage={() => handleNextPage(6)} />,
+      component: <MilyangRecharge6 />,
       ment: "충전이 완료되되어 카드충전 교육이 마무리되었습니다. 아래 교육마치기 버튼을 선택하시면 처음으로 돌아갑니다.",
     },
   ];

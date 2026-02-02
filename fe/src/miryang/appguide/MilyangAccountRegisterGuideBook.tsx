@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import "./MilyangAccountRegisterGuideBook.css"; // CSS 파일 import
 import HomeButton from "../../utils/HomeButton";
 import { useNavigate } from "react-router-dom";
+type PageProps = {
+  onNextPage: () => void;
+};
 
 // 첫 번째 페이지 컴포넌트
-function MilyangAccount1({ onNextPage }) {
+function MilyangAccount1({ onNextPage }: PageProps) {
   return (
     <div className="milyang-account">
       <div className="milyang-account-background" />
@@ -163,7 +166,7 @@ function MilyangAccount1({ onNextPage }) {
 }
 
 // 두 번째 페이지 컴포넌트 - 계좌연결 동의 페이지
-function MilyangAccount2({ onNextPage }) {
+function MilyangAccount2({ onNextPage }: PageProps) {
   return (
     <div className="milyang-account2">
       <div className="milyang-account2-title">계좌연결</div>
@@ -232,7 +235,7 @@ function MilyangAccount2({ onNextPage }) {
 }
 
 // 세 번째 페이지 컴포넌트 - 계좌번호 입력 페이지
-function MilyangAccount3({ onNextPage }) {
+function MilyangAccount3({ onNextPage }: PageProps) {
   return (
     <div className="milyang-account3">
       {/* 뒤로가기 화살표 */}
@@ -283,7 +286,7 @@ function MilyangAccount3({ onNextPage }) {
   );
 }
 // 네 번째 페이지 컴포넌트 - 은행 선택 페이지
-function MilyangAccount4({ onNextPage }) {
+function MilyangAccount4({ onNextPage }: PageProps) {
   return (
     <div className="milyang-account4">
       {/* 뒤로가기 화살표 */}
@@ -310,7 +313,7 @@ function MilyangAccount4({ onNextPage }) {
   );
 }
 // 다섯 번째 페이지 컴포넌트 - ARS 전화 인증 페이지
-function MilyangAccount5({ onNextPage }) {
+function MilyangAccount5({ onNextPage }: PageProps) {
   return (
     <div className="milyang-account5">
       {/* 뒤로가기 화살표 */}
@@ -359,7 +362,7 @@ function MilyangAccount5({ onNextPage }) {
   );
 }
 // 여섯 번째 페이지 컴포넌트 - ARS 전화 요청 모달 페이지
-function MilyangAccount6({ onNextPage }) {
+function MilyangAccount6({ onNextPage }: PageProps) {
   const [isCallRequested, setIsCallRequested] = useState(false);
 
   const handleCallRequest = () => {
@@ -459,7 +462,7 @@ function MilyangAccount6({ onNextPage }) {
   );
 }
 // 일곱 번째 페이지 컴포넌트 - 고객확인정보 등록 페이지
-function MilyangAccount7({ onNextPage }) {
+function MilyangAccount7({ onNextPage }: PageProps) {
   return (
     <div className="milyang-account7">
       {/* 뒤로가기 버튼 */}
@@ -522,7 +525,7 @@ function MilyangAccount7({ onNextPage }) {
   );
 }
 // 여덟 번째 페이지 컴포넌트 - 계좌 연결 완료 페이지
-function MilyangAccount8({ onNextPage }) {
+function MilyangAccount8({ onNextPage }: PageProps) {
   return (
     <div className="milyang-account8">
       {/* 완료 체크 아이콘 */}
@@ -608,7 +611,7 @@ function MilyangAccount8({ onNextPage }) {
 function MilyangAccountRegisterGuideBook() {
   const [currentPage, setCurrentPage] = useState(0);
   const navigate = useNavigate();
-  const handleNextPage = (nextIndex) => {
+  const handleNextPage = (nextIndex: number) => {
     if (nextIndex < 8) {
       // 총 7개 페이지
       setCurrentPage(nextIndex);
