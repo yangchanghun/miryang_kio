@@ -44,7 +44,6 @@ export default function Home() {
       color: "#2ac1bc",
       type: "internal",
       isPremium: false,
-      current: "none",
     },
   ];
   return (
@@ -77,12 +76,6 @@ export default function Home() {
             <div
               key={item.id}
               onClick={() => {
-                {
-                  if (item.current) {
-                    alert("준비중입니다");
-                    return;
-                  }
-                }
                 navigate(item.route);
               }}
               className="
