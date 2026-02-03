@@ -13,13 +13,11 @@ export default function BlockFriendModal({
   setBlockFriend,
   setBlockMission,
 }: Props) {
-  const navigate = useNavigate();
-
   const [showSettingsDropdown, setShowSettingsDropdown] = useState(false);
   const [blockCheck, setBlockCheck] = useState(false);
 
   const handleSuccessComplete = () => {
-    navigate("/kakaotalk/conversation/4");
+    alert("비활성화 되어있습니다");
   };
 
   const handleHideFriend = () => {
