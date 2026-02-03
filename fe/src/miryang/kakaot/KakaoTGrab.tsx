@@ -1,12 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
-declare global {
-  interface Window {
-    kakao: any;
-  }
-}
-
 const KakaoTGrab = () => {
   const navigate = useNavigate();
 

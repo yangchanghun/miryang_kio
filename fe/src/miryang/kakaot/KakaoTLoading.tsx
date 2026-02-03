@@ -1,13 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-declare global {
-  interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    kakao: any;
-  }
-}
-
 const KakaoTLoading = () => {
   const navigate = useNavigate();
   const location = useLocation();

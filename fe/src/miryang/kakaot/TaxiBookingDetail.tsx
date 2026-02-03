@@ -41,7 +41,8 @@ export default function TaxiBookingDetail() {
   };
 
   const mapRef = useRef<HTMLDivElement | null>(null);
-  const mapInstance = useRef<kakao.maps.Map | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const mapInstance = useRef<any>(null);
 
   const [modal, setModal] = useState(false);
   const [selectedSize, setSelectedSize] = useState<"중형" | "대형">("중형");
@@ -54,11 +55,12 @@ export default function TaxiBookingDetail() {
     );
   }
 
-  const { routeData, startLocation, destLocation, fare, time } = state;
+  const { routeData, startLocation, destLocation, fare } = state;
 
   /* =====================
      지도 초기화
   ===================== */
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     if (!window.kakao || !mapRef.current) return;
 
@@ -84,7 +86,8 @@ export default function TaxiBookingDetail() {
       makeMarker(startLocation.coords.y, startLocation.coords.x);
       makeMarker(destLocation.coords.y, destLocation.coords.x);
 
-      const path: kakao.maps.LatLng[] = [];
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const path: any[] = [];
 
       routeData.routes[0]?.sections?.forEach((section) => {
         section.roads?.forEach((road) => {

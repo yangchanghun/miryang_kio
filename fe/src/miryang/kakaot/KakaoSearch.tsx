@@ -4,12 +4,6 @@ import axios from "axios";
 import KakaoTGuideBtn from "./modal/KakaoTGuideBtn";
 import KakaoTGuide from "./modal/KakaoTGuide";
 import HomeButton from "../../utils/HomeButton";
-interface KakaoPlace {
-  place_name: string;
-  address_name: string;
-  x: string;
-  y: string;
-}
 
 interface Place {
   place_name: string;
@@ -26,7 +20,7 @@ export default function KakaoSearch() {
   const currentY = location.state?.currentY as string | undefined;
 
   const [modal, setModal] = useState(false);
-  const [_, setCurrentAddress] = useState("");
+  const [, setCurrentAddress] = useState("");
   const [startInput, setStartInput] = useState("");
   const [destInput, setDestInput] = useState("");
   const [searchResults, setSearchResults] = useState<Place[]>([]);
@@ -55,7 +49,8 @@ export default function KakaoSearch() {
     geocoder.coord2Address(
       Number(currentX),
       Number(currentY),
-      (res, status) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (res: any[], status: any) => {
         if (status === window.kakao.maps.services.Status.OK) {
           const addr = res[0].address.address_name;
           setCurrentAddress(addr);
@@ -77,7 +72,8 @@ export default function KakaoSearch() {
     }
 
     const places = new window.kakao.maps.services.Places();
-    places.keywordSearch(keyword, (data, status) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    places.keywordSearch(keyword, (data: any[], status: any) => {
       if (status === window.kakao.maps.services.Status.OK) {
         setSearchResults(data.slice(0, 5));
       } else {

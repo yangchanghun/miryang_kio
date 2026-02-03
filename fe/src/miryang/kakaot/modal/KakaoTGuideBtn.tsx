@@ -10,7 +10,7 @@ export default function KakaoTGuideBtn({ setModal }: KakaoTGuideBtnProps) {
       onClick={() => setModal(true)}
       aria-label="사용 가이드"
       className="
-        fixed bottom-4 right-4 z-[1000]
+        fixed bottom-30 right-4 z-[1000]
         flex h-20 w-20 flex-col items-center justify-center
         rounded-full
         bg-gradient-to-br from-blue-500 to-green-500
