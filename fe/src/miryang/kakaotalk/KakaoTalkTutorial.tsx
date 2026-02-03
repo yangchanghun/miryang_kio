@@ -15,8 +15,6 @@ const KakaoTalkTutorial = () => {
 
         <button
           onClick={() => {
-            alert("준비중입니다");
-            return;
             navigate("/miryang/kakaotalk/friendadd/1");
           }}
           className="bg-[#FEE500] text-[#3c1e1e] px-9 py-5 rounded-lg mb-10 text-3xl font-semibold"
@@ -26,8 +24,6 @@ const KakaoTalkTutorial = () => {
 
         <button
           onClick={() => {
-            alert("준비중입니다");
-            return;
             navigate("/miryang/kakaotalk/conversation/1");
           }}
           className="bg-[#FEE500] text-[#3c1e1e] px-9 py-5 rounded-lg mb-10 text-3xl font-semibold"
@@ -37,11 +33,9 @@ const KakaoTalkTutorial = () => {
 
         <button
           onClick={() => {
-            alert("준비중입니다");
-            return;
             navigate("/miryang/kakaotalk/friendblock/1");
           }}
-          className="bg-black text-white px-9 py-5 rounded-lg mb-10 text-3xl font-semibold"
+          className="bg-[#FEE500] text-[#3c1e1e] px-9 py-5 rounded-lg mb-10 text-3xl font-semibold"
         >
           카카오톡 상대방 차단하기
         </button>
