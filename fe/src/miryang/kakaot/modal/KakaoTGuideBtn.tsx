@@ -1,5 +1,3 @@
-import React from "react";
-
 interface KakaoTGuideBtnProps {
   setModal: (v: boolean) => void;
 }
