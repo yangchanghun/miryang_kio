@@ -20,7 +20,6 @@ export default function MobileLayout({
         <div className="absolute left-1/2 top-0 z-10 flex h-[25px] w-[120px] -translate-x-1/2 items-center justify-center rounded-b-[15px] bg-[#1a1a1a]">
           <div className="h-2 w-2 rounded-full bg-[#333]" />
         </div>
-
         {/* 상태바 */}
         <div className="mt-[15px] flex items-center justify-between rounded-t-[27px] bg-black px-5 py-2 text-[14px] font-semibold text-white">
           <span className="tabular-nums">9:41</span>
@@ -30,7 +29,6 @@ export default function MobileLayout({
             <span>🔋 85%</span>
           </div>
         </div>
-
         {/* 콘텐츠 영역 */}
         <div className="relative h-full overflow-y-auto rounded-b-[27px] bg-gradient-to-b from-slate-50 to-slate-200">
           {/* 헤더 */}
@@ -48,9 +46,6 @@ export default function MobileLayout({
           {/* 메인 콘텐츠 */}
           <main className="flex flex-col gap-4 p-5 pb-10">{children}</main>
         </div>
-
-        {/* 홈 인디케이터 */}
-        <div className="absolute bottom-2 left-1/2 h-[5px] w-[134px] -translate-x-1/2 rounded bg-[#333]" />
       </div>
     </div>
   );
