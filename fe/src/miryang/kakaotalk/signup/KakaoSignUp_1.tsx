@@ -45,7 +45,7 @@ const KakaoSignUp_1 = () => {
   };
 
   const goNext = () => {
-    navigate("/kakaotalk/tutorial");
+    navigate("/miryang/kakaotalk/main");
   };
 
   return (

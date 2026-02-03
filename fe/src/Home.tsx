@@ -35,7 +35,6 @@ export default function Home() {
       color: "#2ac1bc",
       type: "internal",
       isPremium: false,
-      current: "none",
     },
     {
       id: "kakaot",

@@ -11,11 +11,11 @@ const KakaoSignUp_2 = () => {
   );
 
   const goNext = () => {
-    navigate("/kakaotalk/tutorial");
+    navigate("/mirynag/kakaotalk/main");
   };
 
   const goPrev = () => {
-    navigate("/kakaotalk/signup/1");
+    navigate("/miryang/kakaotalk/signup/1");
   };
 
   const handleHaveEmailClick = () => {

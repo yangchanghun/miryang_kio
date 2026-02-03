@@ -223,7 +223,7 @@ const KakaoSignUp_3 = () => {
             </button>
 
             <button
-              onClick={() => navigate("/kakaotalk/tutorial")}
+              onClick={() => navigate("/kakaotalk/main")}
               className="rounded-lg bg-[#FEE500] px-8 py-4 text-lg font-semibold text-[#3c1e1e]
                          shadow transition hover:-translate-y-1 hover:bg-[#fdd835]"
             >

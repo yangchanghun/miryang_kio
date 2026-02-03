@@ -1,17 +1,11 @@
-import React from "react";
+import type { ReactNode } from "react";
 
 interface KakaoSignUpModalProps {
-  text: string;
+  text: ReactNode;
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const KakaoSignUpModal: React.FC<KakaoSignUpModalProps> = ({
-  text,
-  setModal,
-}) => {
-  // HTML 태그 포함 여부 체크
-  const hasHtmlTags = /<[^>]*>/g.test(text);
-
+const KakaoSignUpModal = ({ text, setModal }: KakaoSignUpModalProps) => {
   return (
     <div
       className="fixed inset-0 z-[999] flex items-center justify-center bg-black/40 font-['Gmarket_Sans','Noto_Sans_KR',sans-serif]"
@@ -23,15 +17,7 @@ const KakaoSignUpModal: React.FC<KakaoSignUpModalProps> = ({
       >
         {/* 메시지 */}
         <div className="mb-4 text-[28px] leading-relaxed text-gray-700">
-          {hasHtmlTags ? (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: text.replace(/<br\s*\/?>/gi, "<br/>"),
-              }}
-            />
-          ) : (
-            <p>{text}</p>
-          )}
+          {text}
         </div>
 
         {/* 확인 버튼 */}
