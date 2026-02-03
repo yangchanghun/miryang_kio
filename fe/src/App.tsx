@@ -3,6 +3,7 @@ import Home from "./Home";
 import MiryangAppGuide from "./routes/MiryangAppGuide";
 import GalaxyGuide from "./routes/GalaxyGuide";
 import DdangyoGuide from "./routes/DdangyoGuide";
+import KakaoTalkGuide from "./routes/KakaoTalkGuide";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/miryang/appguide/*" element={<MiryangAppGuide />}></Route>
         <Route path="/miryang/galaxyguide/*" element={<GalaxyGuide />}></Route>
         <Route path="/miryang/ddangyo/*" element={<DdangyoGuide />}></Route>
+        <Route path="/miryang/kakaotalk/*" element={<KakaoTalkGuide />}></Route>
       </Routes>
     </div>
   );

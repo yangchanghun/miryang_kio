@@ -28,22 +28,24 @@ export default function Home() {
       type: "internal",
     },
     {
-      id: "korail",
+      id: "kakaotalk",
       title: "카카오톡",
       image: "./icon/newkakaoicon.png",
-      route: "/korail/main",
+      route: "/miryang/kakaotalk/main",
       color: "#2ac1bc",
       type: "internal",
       isPremium: false,
+      current: "none",
     },
     {
-      id: "korail",
-      title: "카카오t",
+      id: "kakaot",
+      title: "카카오T",
       image: "./icon/kakaot_icon.png",
-      route: "/korail/main",
+      route: "/miryang/kakaot/main",
       color: "#2ac1bc",
       type: "internal",
       isPremium: false,
+      current: "none",
     },
   ];
   return (
@@ -76,6 +78,12 @@ export default function Home() {
             <div
               key={item.id}
               onClick={() => {
+                {
+                  if (item.current) {
+                    alert("준비중입니다");
+                    return;
+                  }
+                }
                 navigate(item.route);
               }}
               className="

@@ -46,10 +46,7 @@ const DdangyoFinishPage = () => {
   };
 
   const handleRealApp = () => {
-    window.open(
-      "https://play.google.com/store/search?q=%EB%95%A1%EA%B2%A8%EC%9A%94&c=apps",
-      "_blank",
-    );
+    alert("플레이스토어에서 땡겨요 입력 후 다운로드!");
   };
 
   return (
@@ -158,7 +155,7 @@ const DdangyoFinishPage = () => {
           </button>
 
           <button
-            onClick={() => navigate("/ddangyo")}
+            onClick={() => navigate("/")}
             className="w-full py-4 rounded-xl border-2 border-gray-200 text-gray-600 font-semibold hover:bg-gray-50 transition"
           >
             홈으로 돌아가기
