@@ -57,6 +57,7 @@ const KakaoSignUp_3 = () => {
     agreements.kakaoMail,
     agreements.locationInfo,
     agreements.profileInfo,
+    agreements.all,
   ]);
 
   const handleAllAgreement = (checked: boolean) => {

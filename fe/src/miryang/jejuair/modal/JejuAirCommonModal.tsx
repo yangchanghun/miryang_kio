@@ -1,5 +1,3 @@
-import React from "react";
-
 interface JejuAirCommonModalProps {
   onModal: boolean;
   setOnModal: (value: boolean) => void;

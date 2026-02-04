@@ -107,7 +107,10 @@ export default function KorailList() {
 
       {/* Header */}
       <header className="bg-[#1e3a5f] text-white flex items-center px-4 py-3">
-        <button onClick={() => navigate("/korail/main")} className="text-2xl">
+        <button
+          onClick={() => navigate("/miryang/korail/main")}
+          className="text-2xl"
+        >
           ‹
         </button>
         <h1 className="flex-1 text-center font-semibold">열차 조회</h1>
@@ -187,7 +190,7 @@ export default function KorailList() {
                   key={t}
                   onClick={() =>
                     t === "좌석선택"
-                      ? navigate("/korail/seat", {
+                      ? navigate("/miryang/korail/seat", {
                           state: {
                             selectedTrain,
                             passengerForm,
@@ -205,7 +208,7 @@ export default function KorailList() {
             </div>
             <button
               onClick={() =>
-                navigate("/korail/reservation", {
+                navigate("/miryang/korail/reservation", {
                   state: {
                     selectedTrain,
                     passengerForm,

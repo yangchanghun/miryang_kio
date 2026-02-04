@@ -171,7 +171,7 @@ const KorailMain = () => {
             <button
               className="text-blue-600"
               onClick={() =>
-                navigate("/korail/list", {
+                navigate("/miryang/korail/list", {
                   state: { departure, arrival, passengerForm },
                 })
               }
