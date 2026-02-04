@@ -44,6 +44,7 @@ const KakaoSignUp_3 = () => {
       agreements.profileInfo;
 
     if (agreements.all !== allChecked) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setAgreements((prev) => ({ ...prev, all: allChecked }));
     }
 

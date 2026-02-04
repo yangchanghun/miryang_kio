@@ -45,6 +45,15 @@ export default function Home() {
       type: "internal",
       isPremium: false,
     },
+    {
+      id: "jejuairport",
+      title: "제주항공앱",
+      image: "./icon/jejuairport.png",
+      route: "/miryang/jejuair/main",
+      color: "#2ac1bc",
+      type: "internal",
+      isPremium: false,
+    },
   ];
   return (
     <div

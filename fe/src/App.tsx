@@ -6,6 +6,9 @@ import DdangyoGuide from "./routes/DdangyoGuide";
 import KakaoTalkGuide from "./routes/KakaoTalkGuide";
 import KakaoTGuide from "./routes/KakaoTGuide";
 
+import JejuAirGuide from "./routes/JejuAirGude";
+import KorailGuide from "./routes/KorailGuide";
+
 export default function App() {
   return (
     <div>
@@ -16,6 +19,8 @@ export default function App() {
         <Route path="/miryang/ddangyo/*" element={<DdangyoGuide />}></Route>
         <Route path="/miryang/kakaotalk/*" element={<KakaoTalkGuide />}></Route>
         <Route path="/miryang/kakaot/*" element={<KakaoTGuide />}></Route>
+        <Route path="/miryang/jejuair/*" element={<JejuAirGuide />}></Route>
+        <Route path="/miryang/korail/*" element={<KorailGuide />}></Route>
       </Routes>
     </div>
   );
