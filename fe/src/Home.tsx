@@ -63,6 +63,15 @@ export default function Home() {
       type: "internal",
       isPremium: false,
     },
+    {
+      id: "kakaopay",
+      title: "카카오페이",
+      image: "./icon/kakaopay.png",
+      route: "/miryang/kakaopay/login/main",
+      color: "#2ac1bc",
+      type: "internal",
+      isPremium: false,
+    },
   ];
   return (
     <div
