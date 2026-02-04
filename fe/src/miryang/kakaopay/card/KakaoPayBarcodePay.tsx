@@ -44,17 +44,12 @@ const KakaoPayBarcodePay = () => {
               localStorage.setItem("level", "3");
               navigate("/miryang/kakaopay/payment/main");
             }}
-            className="cursor-pointer rounded-xl bg-white p-4 shadow"
+            className="cursor-pointer flex rounded-xl bg-white p-4 shadow"
           >
             <img
               src="/kakaopay/emoticon/fake-barcode.png"
               alt="barcode"
               className="mb-3 w-full"
-            />
-            <img
-              src="/kakaopay/emoticon/fake-qr.png"
-              alt="qr"
-              className="w-full"
             />
           </div>
         </div>

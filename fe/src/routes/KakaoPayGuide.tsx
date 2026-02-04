@@ -21,48 +21,57 @@ import KakaoPayTransferConfirm from "../miryang/kakaopay/transfer/KakaoPayTransf
 import KakaoPayTransferComplete from "../miryang/kakaopay/transfer/KakaoPayTransferComplete";
 import KakaoPayEducationComplete from "../miryang/kakaopay/KakaoPayEducationComplete";
 import KakaoPayCardScan from "../miryang/kakaopay/card/KakaoPayCardScan";
+import JejuAppLayout from "../miryang/jejuair/JejuAppLayout";
 
 export default function KakaoPayGuide() {
   return (
     <Routes>
-      {/* login */}
-      <Route path="login/main" element={<KakaoPayLogin />} />
-      <Route path="login/auth" element={<KakaoPayAuth />} />
-      <Route path="login/auth/start" element={<KakaoPayAuthStart />} />
-      <Route path="login/auth/terms" element={<KakaoPayTerms />} />
-      <Route path="login/auth/complete" element={<KakaoPayAuthComplete />} />
+      <Route element={<JejuAppLayout />}>
+        {/* login */}
+        <Route path="login/main" element={<KakaoPayLogin />} />
+        <Route path="login/auth" element={<KakaoPayAuth />} />
+        <Route path="login/auth/start" element={<KakaoPayAuthStart />} />
+        <Route path="login/auth/terms" element={<KakaoPayTerms />} />
+        <Route path="login/auth/complete" element={<KakaoPayAuthComplete />} />
 
-      {/*payment  */}
-      <Route path="payment/main" element={<KakaoPayPayment />} />
-      <Route path="payment/settings" element={<KakaoPaySettings />} />
-      <Route path="payment/account" element={<KakaoPayChargeAccount />} />
-      <Route
-        path="payment/account/connect"
-        element={<KakaoPayConnectAccount />}
-      />
-      <Route
-        path="payment/account/verify"
-        element={<KakaoPayVerifyAccount />}
-      />
-      <Route path="payment/account/cert" element={<KakaoPayCertSign />} />
-      <Route
-        path="payment/account/complete"
-        element={<KakaoPayAccountComplete />}
-      />
+        {/*payment  */}
+        <Route path="payment/main" element={<KakaoPayPayment />} />
+        <Route path="payment/settings" element={<KakaoPaySettings />} />
+        <Route path="payment/account" element={<KakaoPayChargeAccount />} />
+        <Route
+          path="payment/account/connect"
+          element={<KakaoPayConnectAccount />}
+        />
+        <Route
+          path="payment/account/verify"
+          element={<KakaoPayVerifyAccount />}
+        />
+        <Route path="payment/account/cert" element={<KakaoPayCertSign />} />
+        <Route
+          path="payment/account/complete"
+          element={<KakaoPayAccountComplete />}
+        />
 
-      {/* card register */}
-      <Route path="payment/card/register" element={<KakaopayCardRegister />} />
-      <Route path="payment/card/scan" element={<KakaoPayCardScan />} />
-      <Route path="payment/barcode" element={<KakaoPayBarcodePay />} />
+        {/* card register */}
+        <Route
+          path="payment/card/register"
+          element={<KakaopayCardRegister />}
+        />
+        <Route path="payment/card/scan" element={<KakaoPayCardScan />} />
+        <Route path="payment/barcode" element={<KakaoPayBarcodePay />} />
 
-      {/* transfer  */}
-      <Route path="home" element={<KakaoPayHome />} />
-      <Route path="transfer" element={<KakaoPayTransfer />} />
-      <Route path="input" element={<KakaoPayAccountInput />} />
-      <Route path="amount/input" element={<KakaoPayAmountInput />} />
-      <Route path="confirm" element={<KakaoPayTransferConfirm />} />
-      <Route path="transfer/complete" element={<KakaoPayTransferComplete />} />
-      <Route path="complete" element={<KakaoPayEducationComplete />} />
+        {/* transfer  */}
+        <Route path="home" element={<KakaoPayHome />} />
+        <Route path="transfer" element={<KakaoPayTransfer />} />
+        <Route path="input" element={<KakaoPayAccountInput />} />
+        <Route path="amount/input" element={<KakaoPayAmountInput />} />
+        <Route path="confirm" element={<KakaoPayTransferConfirm />} />
+        <Route
+          path="transfer/complete"
+          element={<KakaoPayTransferComplete />}
+        />
+        <Route path="complete" element={<KakaoPayEducationComplete />} />
+      </Route>
     </Routes>
   );
 }
