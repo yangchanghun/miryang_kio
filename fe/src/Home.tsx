@@ -54,6 +54,15 @@ export default function Home() {
       type: "internal",
       isPremium: false,
     },
+    {
+      id: "korail",
+      title: "KTX 예약 앱",
+      image: "./icon/korail.png",
+      route: "/miryang/korail/main",
+      color: "#2ac1bc",
+      type: "internal",
+      isPremium: false,
+    },
   ];
   return (
     <div
