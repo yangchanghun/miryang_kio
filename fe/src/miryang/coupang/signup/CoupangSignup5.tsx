@@ -57,7 +57,7 @@ const CoupangSignup5: React.FC = () => {
 
     setTimeout(() => {
       setShowNotification(true);
-      setTimeout(() => setShowNotification(false), 3000);
+      setTimeout(() => setShowNotification(false), 30000);
     }, 500);
   };
 
@@ -79,7 +79,7 @@ const CoupangSignup5: React.FC = () => {
     setTimeout(() => {
       localStorage.setItem("계정", JSON.stringify({ name, email, phone }));
       navigate("/miryang/coupang/signup/6");
-    }, 2000);
+    }, 5000);
   };
 
   return (
@@ -94,7 +94,7 @@ const CoupangSignup5: React.FC = () => {
             <span className="font-semibold">메시지</span>
             <span className="ml-auto text-xs text-gray-400">지금</span>
           </div>
-          <p className="text-sm">
+          <p className="text-xl">
             <span className="block font-semibold text-blue-400">쿠팡</span>
             인증번호는{" "}
             <strong className="text-blue-400">{generatedCode}</strong> 입니다.
