@@ -100,7 +100,7 @@ const BlockFriend = () => {
           src="/kakaotalk/kakaoprofile.jpg"
           className="w-14 h-14 rounded-full mr-4"
         />
-        <span className="text-lg font-medium flex-1">양창훈</span>
+        <span className="text-lg font-medium flex-1">홍xx</span>
         <button className="text-sm px-4 py-1 border rounded-full bg-gray-100">
           멀티프로필 +
         </button>

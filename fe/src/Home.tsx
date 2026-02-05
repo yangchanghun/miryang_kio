@@ -72,6 +72,15 @@ export default function Home() {
       type: "internal",
       isPremium: false,
     },
+    {
+      id: "coupang",
+      title: "쿠팡",
+      image: "./icon/coupang.png",
+      route: "/miryang/coupang/tutorial",
+      color: "#2ac1bc",
+      type: "internal",
+      isPremium: false,
+    },
   ];
   return (
     <div

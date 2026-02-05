@@ -118,7 +118,7 @@ export default function KakaoFriendAdd() {
           src="/kakaotalk/kakaoprofile.jpg"
           className="w-14 h-14 rounded-full"
         />
-        <span className="text-lg font-medium">양창훈</span>
+        <span className="text-lg font-medium">홍xx</span>
         <button className="ml-auto px-4 py-1 rounded-full bg-gray-100 text-sm">
           멀티프로필 +
         </button>
