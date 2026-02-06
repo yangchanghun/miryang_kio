@@ -81,6 +81,15 @@ export default function Home() {
       type: "internal",
       isPremium: false,
     },
+    {
+      id: "goverment24",
+      title: "정부24",
+      image: "./icon/goverment.png",
+      route: "/miryang/goverment/download",
+      color: "#2ac1bc",
+      type: "internal",
+      isPremium: false,
+    },
   ];
   return (
     <div

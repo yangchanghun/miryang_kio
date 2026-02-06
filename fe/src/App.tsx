@@ -10,6 +10,7 @@ import JejuAirGuide from "./routes/JejuAirGude";
 import KorailGuide from "./routes/KorailGuide";
 import KakaoPayGuide from "./routes/KakaoPayGuide";
 import CoupangGuide from "./routes/CoupangGuide";
+import GovermentGuide from "./routes/GovermentGuide";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/miryang/korail/*" element={<KorailGuide />}></Route>
         <Route path="/miryang/kakaopay/*" element={<KakaoPayGuide />}></Route>
         <Route path="/miryang/coupang/*" element={<CoupangGuide />}></Route>
+        <Route path="/miryang/goverment/*" element={<GovermentGuide />}></Route>
       </Routes>
     </div>
   );
