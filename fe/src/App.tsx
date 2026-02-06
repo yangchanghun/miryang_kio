@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./Home";
 import MiryangAppGuide from "./routes/MiryangAppGuide";
 import GalaxyGuide from "./routes/GalaxyGuide";
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/miryang/coupang/*" element={<CoupangGuide />}></Route>
         <Route path="/miryang/goverment/*" element={<GovermentGuide />}></Route>
       </Routes>
+      <Analytics />
     </div>
   );
 }
